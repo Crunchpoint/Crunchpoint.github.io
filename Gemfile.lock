@@ -221,7 +221,7 @@ GEM
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
-    minimal-mistakes-jekyll (4.20.2)
+    minimal-mistakes-jekyll (4.24.0)
       jekyll (>= 3.7, < 5.0)
       jekyll-feed (~> 0.1)
       jekyll-gist (~> 1.5)
@@ -304,7 +304,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-include-cache
-  minimal-mistakes-jekyll (~> 4.20.0)
+  minimal-mistakes-jekyll
   webrick (~> 1.8)
 
 BUNDLED WITH
