@@ -1,13 +1,10 @@
 source "https://rubygems.org"
 
-# Update the github-pages gem to the latest version
 gem "github-pages", group: :jekyll_plugins
+gem "minimal-mistakes-jekyll", "~> 4.20.0"
 
-# Update the version constraint for jekyll-include-cache
 group :jekyll_plugins do
-  gem "jekyll-include-cache", "~> 0.2"
+  gem "jekyll-include-cache"
 end
 
 gem "webrick", "~> 1.8"
-
-# Add any other necessary gems or plugins for your project below this line
