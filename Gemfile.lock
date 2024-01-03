@@ -140,7 +140,6 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  jekyll
   minimal-mistakes-jekyll
 
 BUNDLED WITH
