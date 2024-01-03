@@ -43,6 +43,7 @@
   > * {
     margin-top: 1em;
     margin-bottom: 1em;
+    word-break: keep-all;
   }
 
   h2,
@@ -124,6 +125,7 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
+  // text-align: center;
   width: 36px;
   height: 36px;
 
@@ -134,7 +136,7 @@
   }
 
   img {
-    max-width: 110px;
+    max-width: 150px;
     border-radius: 50%;
 
     @include breakpoint($large) {
@@ -166,6 +168,7 @@
 
 .author__name {
   margin: 0;
+  padding-left: 35px;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -216,7 +219,7 @@
 
     &:before {
       @supports (pointer-events: none) {
-        content: '';
+        content: "";
         position: fixed;
         top: 0;
         left: 0;
@@ -350,4 +353,3 @@
     margin-right: initial;
   }
 }
-
