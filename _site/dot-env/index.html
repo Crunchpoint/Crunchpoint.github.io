@@ -7,10 +7,10 @@
 -->
 <html lang="en" class="no-js">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
 <!-- begin _includes/seo.html --><title>[Python] 환경변수 .env 사용법 - 기록하는 습관</title>
-<meta name="description" content="dot-env 기본 사용 방법">
+<meta name="description" content="dotenv를 사용해야 하는 이유">
 
 
   <meta name="author" content="Johnny">
@@ -23,10 +23,10 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="기록하는 습관">
 <meta property="og:title" content="[Python] 환경변수 .env 사용법">
-<meta property="og:url" content="http://localhost:4000/test2/">
+<meta property="og:url" content="http://localhost:4000/dot-env/">
 
 
-  <meta property="og:description" content="dot-env 기본 사용 방법">
+  <meta property="og:description" content="dotenv를 사용해야 하는 이유">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/test2/">
+<link rel="canonical" href="http://localhost:4000/dot-env/">
 
 
 
@@ -68,23 +68,25 @@
 
 
 <!-- end _includes/seo.html -->
-
-
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="기록하는 습관 Feed">
+ 
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="기록하는 습관 Feed" />
 
 
 <!-- https://t.co/dKP3o1e -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="stylesheet" href="/assets/css/main.css" />
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" /></noscript>
 
 
  <!-- start custom head snippets -->
@@ -110,7 +112,7 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-          <a class="site-logo" href="/"><img src="/assets/img/logo.png" alt="기록하는 습관"></a>
+          <a class="site-logo" href="/"><img src="/assets/images/logo.png" alt="기록하는 습관"></a>
         
         <a class="site-title" href="/">
           기록하는 습관
@@ -178,7 +180,7 @@
   
     <div class="author__avatar">
       <a href="http://localhost:4000/">
-        <img src="/assets/img/profile.jpeg" alt="Johnny" itemprop="image" class="u-photo">
+        <img src="/assets/images/profile.jpeg" alt="Johnny" itemprop="image" class="u-photo">
       </a>
     </div>
   
@@ -297,7 +299,7 @@
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[Python] 환경변수 .env 사용법" /> <meta
       itemprop="description"
-      content="dot-env 기본 사용 방법" /> <meta
+      content="dotenv를 사용해야 하는 이유" /> <meta
       itemprop="datePublished"
       content="2024-01-04T00:00:00+09:00" /> 
 
@@ -306,57 +308,88 @@
       <header>
         
         <h1 id="page-title" class="page__title p-name" itemprop="headline">
-          <a href="http://localhost:4000/test2/" class="u-url" itemprop="url"
+          <a href="http://localhost:4000/dot-env/" class="u-url" itemprop="url"
             ><p>[Python] 환경변수 .env 사용법</p>
 </a
           >
         </h1>
-         
-
-  <p class="page__meta">
+          
+<p class="page__meta">
+   
+  <span class="page__meta-date">
+    <i class="far fa-calendar-alt" aria-hidden="true"></i>
     
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2024-01-04T00:00:00+09:00">January 4, 2024</time>
-      </span>
-    
+    <time datetime="2024-01-04T00:00:00+09:00">2024 January 4</time>
+  </span>
+   <span class="page__meta-sep"></span>   
 
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
+  <span class="page__meta-readtime">
+    <i class="far fa-clock" aria-hidden="true"></i>
+     less than 1 minute read 
+  </span>
+  
+</p>
 
 
       </header>
       
 
       <section class="page__content e-content" itemprop="text">
-         <h1 id="dot-env-기본-사용-방법">dot-env 기본 사용 방법</h1>
+        
+        <aside class="sidebar__right sticky">
+          <nav class="toc">
+            <header>
+              <h4 class="nav__title">
+                <i class="fas fa-sort-down"></i> Table of Contents
+              </h4>
+            </header>
+            <ul class="toc__menu"><li><a href="#dotenv를-사용해야-하는-이유">dotenv를 사용해야 하는 이유</a></li><li><a href="#dotenv-설치">dotenv 설치</a></li><li><a href="#env-파일-생성">.env 파일 생성</a><ul><li><a href="#-env-">&lt; .env &gt;</a></li><li><a href="#-dot_envpy-">&lt; dot_env.py &gt;</a></li></ul></li></ul>
 
-<p>개발을 하다보면 외부에서 open api키를 받아와서 코드에 직접 사용 하거나 데이터베이스 접속을 위해 id 또는 password등을 입력해야 하는 상황이 있다</p>
+          </nav>
+        </aside>
+         <h2 id="dotenv를-사용해야-하는-이유">dotenv를 사용해야 하는 이유</h2>
 
-<p>이럴때 걱정 되는 점 중에 하나가, github에 업로드한 repository를 private로 따로 설정을 해두지 않았다면 모든 사람에게 민감한 정보가 그대로 유출될 수 있다는 것 이다</p>
+<p>개발을 하다 보면 외부에서 발급받은 API 키를 코드에 직접 사용하거나 데이터베이스 접속을 위해 id 또는 password 등을 입력해야 하는 상황이 있다</p>
 
-<p>보편적으로 .env는 웹 개발 환경에서 많이 사용 되지만 필요하다면 파이썬에서도 이 기능을 쉽게 사용할 수 있다</p>
+<p>이럴때 걱정되는 점 중의 하나가, git hub에 업로드한 repository를 private로 따로 설정을 해두지 않았다면 모든 사람에게 민감한 정보가 그대로 유출될 수 있다는 것이다</p>
+
+<p>보편적으로 .env는 웹 개발 환경에서 많이 사용되지만 필요하다면 파이썬에서도 이 기능을 쉽게 사용할 수 있다</p>
 
 <h2 id="dotenv-설치">dotenv 설치</h2>
 
 <div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pip <span class="nb">install </span>python-dotenv
 </code></pre></div></div>
 
-<p><img src="../assets/img/dot.png" alt="dotenv" /></p>
+<h2 id="env-파일-생성">.env 파일 생성</h2>
+
+<p><img src="/assets/images/dot.png" alt="dotenv" /></p>
+
+<p>작업 폴더내 .env파일을 하나 생성하고</p>
+
+<h3 id="-env-">&lt; .env &gt;</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MY_ID</span> <span class="o">=</span> <span class="n">ILovePython</span>
+<span class="n">MY_PASSWORD</span> <span class="o">=</span> <span class="mi">1234</span>
+</code></pre></div></div>
+
+<p>왼쪽은 변수명, 그리고 오른쪽에는 값을 지정해준다</p>
+
+<h3 id="-dot_envpy-">&lt; dot_env.py &gt;</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">from</span> <span class="n">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+
+<span class="nf">load_dotenv</span><span class="p">()</span>
+
+<span class="nb">id</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">MY_ID</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">pw</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">MY_PASSWORD</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">pw</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>사용할 파이썬 파일에서 위 처럼 불러와서 사용하면 된다 :)</p>
+
+<p class="notice--warning"><i class="material-symbols-outlined" style="vertical-align: middle;">check_circle</i> github에 commit 하기 전에 .gitignore에 .env를 잊지 말고 넣어주면 완료!</p>
  
       </section>
 
@@ -382,7 +415,7 @@
 
  
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-01-04T00:00:00+09:00">January 4, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-01-04T00:00:00+09:00">2024 January 4</time></p>
 
       </footer>
 
