@@ -15,10 +15,10 @@
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale: "ko-KR"
+locale: "en-US"
 title: "기록하는 습관"
 title_separator: "-"
-subtitle: #""
+subtitle: "개발노트"
 name: "Johnny"
 description: "Johnny's development blog"
 url: "https://Crunchpoint.github.io"
@@ -26,8 +26,8 @@ baseurl: # the subpath of your site, e.g. "/blog"
 repository: "Crunchpoint/Crunchpoint.github.io"
 teaser: #"/assets/img/logo.png"
 logo: "/assets/img/logo.png"
-masthead_title: # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+masthead_title: "기록하는 습관"
+breadcrumbs: true
 words_per_minute: 200
 comments:
   provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -59,7 +59,7 @@ reCaptcha:
 atom_feed:
   path: # blank (default) uses feed.xml
   hide: # true, false (default)
-search: # true, false (default)
+search: true
 search_full_content: # true, false (default)
 search_provider: # lunr (default), algolia, google
 lunr:
@@ -105,7 +105,7 @@ analytics:
 author:
   name: "Johnny"
   avatar: "/assets/img/profile.jpeg"
-  bio: "풀스택 웹 개발과 빅데이터 분석을 공부하고 있습니다"
+  bio: "웹 개발과 빅데이터 분석을 공부하고 있습니다"
   location: "Seoul, Korea"
   email: "mycoside@gmail.com"
   links:
@@ -123,10 +123,10 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/Crunchpoint?tab=repositories"
+    - label: "codepen"
+      icon: "fab fa-fw fa-codepen"
+      url: "https://codepen.io/Crunchpoint"
 
 # Site Footer
 footer:
@@ -214,7 +214,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul
 
 # Plugins (previously gems:)
 plugins:
@@ -275,8 +275,10 @@ defaults:
       type: posts
     values:
       layout: single
+      date_format: "%Y-%m-%d"
       author_profile: true
+      show_date: true
       read_time: true
-      comments: # true
-      share: true
+      comments: false
+      share: false
       related: true

@@ -1,3 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-03T18:21:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 습관</title><subtitle>Johnny&apos;s development blog</subtitle><author><name>Johnny</name><email>mycoside@gmail.com</email></author><entry><title type="html">첫 포스팅</title><link href="http://localhost:4000/test/" rel="alternate" type="text/html" title="첫 포스팅" /><published>2024-01-03T00:00:00+09:00</published><updated>2024-01-03T00:00:00+09:00</updated><id>http://localhost:4000/test</id><content type="html" xml:base="http://localhost:4000/test/"><![CDATA[<h1 id="테스트중">테스트중</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-04T17:52:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 습관</title><subtitle>Johnny&apos;s development blog</subtitle><author><name>Johnny</name><email>mycoside@gmail.com</email></author><entry><title type="html">[Python] 환경변수 .env 사용법</title><link href="http://localhost:4000/test2/" rel="alternate" type="text/html" title="[Python] 환경변수 .env 사용법" /><published>2024-01-04T00:00:00+09:00</published><updated>2024-01-04T00:00:00+09:00</updated><id>http://localhost:4000/test2</id><content type="html" xml:base="http://localhost:4000/test2/"><![CDATA[<h1 id="dot-env-기본-사용-방법">dot-env 기본 사용 방법</h1>
 
-<p>테스트중</p>]]></content><author><name>Johnny</name><email>mycoside@gmail.com</email></author><summary type="html"><![CDATA[테스트중]]></summary></entry></feed>
+<p>개발을 하다보면 외부에서 open api키를 받아와서 코드에 직접 사용 하거나 데이터베이스 접속을 위해 id 또는 password등을 입력해야 하는 상황이 있다</p>
+
+<p>이럴때 걱정 되는 점 중에 하나가, github에 업로드한 repository를 private로 따로 설정을 해두지 않았다면 모든 사람에게 민감한 정보가 그대로 유출될 수 있다는 것 이다</p>
+
+<p>보편적으로 .env는 웹 개발 환경에서 많이 사용 되지만 필요하다면 파이썬에서도 이 기능을 쉽게 사용할 수 있다</p>
+
+<h2 id="dotenv-설치">dotenv 설치</h2>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pip <span class="nb">install </span>python-dotenv
+</code></pre></div></div>
+
+<p><img src="../assets/img/dot.png" alt="dotenv" /></p>]]></content><author><name>Johnny</name><email>mycoside@gmail.com</email></author><category term="python" /><category term="dot-env" /><summary type="html"><![CDATA[dot-env 기본 사용 방법]]></summary></entry></feed>
