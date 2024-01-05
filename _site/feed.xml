@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-05T03:41:48+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 습관</title><subtitle>Johnny&apos;s development blog</subtitle><author><name>Johnny</name><email>mycoside@gmail.com</email></author><entry><title type="html">[Python] 환경변수 .env 사용법</title><link href="http://localhost:4000/dot-env/" rel="alternate" type="text/html" title="[Python] 환경변수 .env 사용법" /><published>2024-01-04T00:00:00+09:00</published><updated>2024-01-04T00:00:00+09:00</updated><id>http://localhost:4000/dot-env</id><content type="html" xml:base="http://localhost:4000/dot-env/"><![CDATA[<h2 id="dotenv를-사용해야-하는-이유">dotenv를 사용해야 하는 이유</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-05T17:57:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">기록하는 습관</title><subtitle>Johnny&apos;s development blog</subtitle><author><name>Johnny</name><email>mycoside@gmail.com</email></author><entry><title type="html">[Python] 환경변수 .env 사용법</title><link href="http://localhost:4000/dot-env/" rel="alternate" type="text/html" title="[Python] 환경변수 .env 사용법" /><published>2024-01-04T00:00:00+09:00</published><updated>2024-01-04T00:00:00+09:00</updated><id>http://localhost:4000/dot-env</id><content type="html" xml:base="http://localhost:4000/dot-env/"><![CDATA[<h2 id="dotenv를-사용해야-하는-이유">dotenv를 사용해야 하는 이유</h2>
 
 <p>개발을 하다 보면 외부에서 발급받은 API 키를 코드에 직접 사용하거나 데이터베이스 접속을 위해 id 또는 password 등을 입력해야 하는 상황이 있다</p>
 
@@ -13,7 +13,7 @@
 
 <h2 id="env-파일-생성">.env 파일 생성</h2>
 
-<p><img src="/assets/images/dot.png" alt="dotenv" /></p>
+<p><img src="/assets/images/2023-12-21/dot.png" alt="dotenv" /></p>
 
 <p>작업 폴더내 .env파일을 하나 생성하고</p>
 
@@ -40,4 +40,157 @@
 
 <p>사용할 파이썬 파일에서 위 처럼 불러와서 사용하면 된다 :)</p>
 
-<p class="notice--warning"><i class="material-symbols-outlined" style="vertical-align: middle;">check_circle</i> github에 commit 하기 전에 .gitignore에 .env를 잊지 말고 넣어주면 완료!</p>]]></content><author><name>Johnny</name><email>mycoside@gmail.com</email></author><category term="dot-env" /><category term="python" /><summary type="html"><![CDATA[dotenv를 사용해야 하는 이유]]></summary></entry></feed>
+<p class="notice--warning"><i class="material-symbols-outlined" style="vertical-align: middle;">check_circle</i> github에 commit 하기 전에 .gitignore에 .env를 잊지 말고 넣어주면 완료!</p>]]></content><author><name>Johnny</name><email>mycoside@gmail.com</email></author><category term="dot-env" /><category term="python" /><summary type="html"><![CDATA[dotenv를 사용해야 하는 이유]]></summary></entry><entry><title type="html">[Python] Open API 영화 데이터 수집 및 저장</title><link href="http://localhost:4000/OpenAPI/" rel="alternate" type="text/html" title="[Python] Open API 영화 데이터 수집 및 저장" /><published>2023-12-18T00:00:00+09:00</published><updated>2023-12-18T00:00:00+09:00</updated><id>http://localhost:4000/OpenAPI</id><content type="html" xml:base="http://localhost:4000/OpenAPI/"><![CDATA[<p>Python에서 open api를 활용하여 데이터 수집 하는 방법을 알아보고, csv와 json으로 저장 하는 방법을 알아보자</p>
+
+<p>사이트는 영화 진흥 위원회에서 제공하는 데이터를 받아올 예정이다</p>
+
+<p><a href="https://www.kobis.or.kr/kobisopenapi/homepg/main/main.do">영화 진흥 위원회 바로가기</a></p>
+
+<h2 id="1-회원가입">1. 회원가입</h2>
+
+<ul>
+  <li>
+    <p>위 주소로 접속 후 로그인 버튼을 눌러서 회원 가입을 한다<br />
+<img src="/assets/images/2023-12-18/01.png" alt="sign-in" /></p>
+  </li>
+  <li>
+    <p>키 발급 받기를 클릭 하고<br />
+<img src="/assets/images/2023-12-18/02.png" alt="sign-in" /><br /></p>
+  </li>
+  <li>
+    <p>사용목적과 관리명을 임의로 정해준 뒤, 사용url은 http://localhost로 입력<br />키 발급이 완료되고 발급된 키는 조금 있다가 사용할 예정이다
+<img src="/assets/images/2023-12-18/03.png" alt="sign-in" /></p>
+  </li>
+  <li>
+    <p>이제 OPEN API를 클릭!<br />
+<img src="/assets/images/2023-12-18/04.png" alt="sign-in" /></p>
+  </li>
+  <li>
+    <p>주간/주말 박스오피스 클릭 후 REST 방식을 확인<br />요청 인터페이스를 보면 다른건 default값이 있지만, key와 targetDt는 지정해 주어야 한다<br />
+<img src="/assets/images/2023-12-18/05.png" alt="sign-in" /></p>
+  </li>
+  <li>
+    <p>내가 리턴 받을 데이터에 대한 설명이다. 조금 있다가 자세하게 살펴보자<br />
+<img src="/assets/images/2023-12-18/06.png" alt="sign-in" /></p>
+  </li>
+  <li>
+    <p>Json형태로 응답 받을 예정이다<br />
+<img src="/assets/images/2023-12-18/07.png" alt="sign-in" /></p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>끝으로 마지막 사진의 json부분을 복사해서 사용할 예정이다. 아래 코드의 발급키 부분에 발급받은 키를 넣어주면 된다</p>
+</blockquote>
+
+<h2 id="2-영화-데이터-받아오기">2. 영화 데이터 받아오기</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">import</span> <span class="n">json</span>
+
+<span class="c1"># 발급 받은 키를 변수에 할당
+</span><span class="n">key</span> <span class="o">=</span> <span class="sh">"</span><span class="s">발급 키</span><span class="sh">"</span>
+
+<span class="c1"># 조회를 할 날짜를 yyyymmdd 형식으로 지정
+</span><span class="n">date</span> <span class="o">=</span> <span class="mi">20231217</span>
+
+<span class="c1"># 세선 생성
+</span><span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nc">Session</span><span class="p">()</span>
+<span class="c1"># url 생성
+</span><span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s">&amp;targetDt=</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="sh">"</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">session</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="c1"># 응답 받은 데이터를 json 형식으로 movies 변수에 할당
+</span><span class="n">movies</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="nf">loads</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c1"># 결과 확인
+</span><span class="nf">print</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>결과를 확인 해보면 딕셔너리(json) 형태로 값을 리턴 받았을 것이다.</p>
+
+<h2 id="3-json-및-csv-형식으로-파일-저장">3. json 및 csv 형식으로 파일 저장</h2>
+
+<h3 id="--csv">- csv</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># csv로 저장될 파일 이름 지정
+</span><span class="n">fname1</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">boxOffice_</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s">.csv</span><span class="sh">"</span>
+
+<span class="c1"># 저 데이터들 중에 순위, 영화 명, 개봉일, 누적 관객 수를 저장
+# 필요한 데이터는 "응답 구조" 가 나와있는 부분에서 확인할 수 있다
+</span><span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">fname1</span><span class="p">,</span> <span class="sh">"</span><span class="s">w</span><span class="sh">"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="sh">"</span><span class="s">utf-8</span><span class="sh">"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="sh">"</span><span class="s">순위,영화명,개봉일,누적관객</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">movies</span><span class="p">[</span><span class="sh">"</span><span class="s">boxOfficeResult</span><span class="sh">"</span><span class="p">][</span><span class="sh">"</span><span class="s">dailyBoxOfficeList</span><span class="sh">"</span><span class="p">]:</span>
+        <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="sh">'</span><span class="s">rank</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="s">,</span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="sh">'</span><span class="s">movieNm</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="s">,</span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="sh">'</span><span class="s">openDt</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="s">,</span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="sh">'</span><span class="s">audiAcc</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># json으로 저장될 파일 이름 지정
+</span><span class="n">fname2</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">boxOffice_</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s">.json</span><span class="sh">"</span>
+<span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">fname2</span><span class="p">,</span> <span class="sh">"</span><span class="s">w</span><span class="sh">"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="sh">"</span><span class="s">utf-8</span><span class="sh">"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="p">.</span><span class="nf">dump</span><span class="p">(</span><span class="n">movies</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="--json">- Json</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">import</span> <span class="n">json</span>
+
+<span class="n">key</span> <span class="o">=</span> <span class="sh">"</span><span class="s">발급 키</span><span class="sh">"</span>
+<span class="n">date</span> <span class="o">=</span> <span class="mi">20231217</span>
+
+<span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nc">Session</span><span class="p">()</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s">&amp;targetDt=</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="sh">"</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">session</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">movies</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="nf">loads</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">fname1</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">boxOffice_</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s">.csv</span><span class="sh">"</span>
+
+<span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">fname1</span><span class="p">,</span> <span class="sh">"</span><span class="s">w</span><span class="sh">"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="sh">"</span><span class="s">utf-8</span><span class="sh">"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="sh">"</span><span class="s">순위,영화명,개봉일,누적관객</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">movies</span><span class="p">[</span><span class="sh">"</span><span class="s">boxOfficeResult</span><span class="sh">"</span><span class="p">][</span><span class="sh">"</span><span class="s">dailyBoxOfficeList</span><span class="sh">"</span><span class="p">]:</span>
+        <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="sh">'</span><span class="s">rank</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="s">,</span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="sh">'</span><span class="s">movieNm</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="s">,</span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="sh">'</span><span class="s">openDt</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="s">,</span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="sh">'</span><span class="s">audiAcc</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
+
+
+<span class="n">fname2</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">boxOffice_</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s">.json</span><span class="sh">"</span>
+
+<span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">fname2</span><span class="p">,</span> <span class="sh">"</span><span class="s">w</span><span class="sh">"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="sh">"</span><span class="s">utf-8</span><span class="sh">"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="p">.</span><span class="nf">dump</span><span class="p">(</span><span class="n">movies</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>]]></content><author><name>Johnny</name><email>mycoside@gmail.com</email></author><category term="python" /><category term="Open API" /><summary type="html"><![CDATA[Python에서 open api를 활용하여 데이터 수집 하는 방법을 알아보고, csv와 json으로 저장 하는 방법을 알아보자]]></summary></entry><entry><title type="html">[Python] 다른 폴더에 module import(호출)하기</title><link href="http://localhost:4000/import-python-file/" rel="alternate" type="text/html" title="[Python] 다른 폴더에 module import(호출)하기" /><published>2023-12-18T00:00:00+09:00</published><updated>2023-12-18T00:00:00+09:00</updated><id>http://localhost:4000/import-python-file</id><content type="html" xml:base="http://localhost:4000/import-python-file/"><![CDATA[<p>바로 본론으로 들어가자면…</p>
+
+<p>파이썬을 배우면서 어떻게 보면 가장 기본적이지만, 헷갈리는 부분이 있었는데</p>
+
+<p>그 중에 하나가 바로 내가 만든 class나 함수를 만들어 놓은 파일을 다른 폴더에서 import 하는 방법이다</p>
+
+<p>여러 경우의 수가 있는데, 한번 살펴 보기로 해보자</p>
+
+<h2 id="1같은-폴더에-있는-파일인-경우">1.같은 폴더에 있는 파일인 경우</h2>
+
+<ul>
+  <li>가장 간단한 케이스이다</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">다른파일.py</span> <span class="kn">import</span> <span class="n">내모듈</span>
+</code></pre></div></div>
+
+<h2 id="2하위-폴더일-경우">2.하위 폴더일 경우</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">하위폴더.다른파일.py</span> <span class="kn">import</span> <span class="n">내모듈</span>
+</code></pre></div></div>
+
+<h2 id="3상위-폴더일-경우">3.상위 폴더일 경우</h2>
+
+<p>만약 상위폴더에 접근을 해야할 경우라면, 작업경로에 파일의 새로운 경로를 추가해줘야 한다.</p>
+
+<p>하지만 폴더 구조가 복잡할 경우를 대비해서 제일 상위 폴더를 잡아놓는게 일반적이다.</p>
+
+<p><img src="/assets/images/2023-12-18/get_path.png" alt="copy-path" /></p>
+
+<p>vscode 기준으로 절대 경로를 얻는 방법은 폴더를 오른쪽 클릭 후 copy path를 선택하면 복사가 된다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">sys</span>
+<span class="n">sys</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="sh">"</span><span class="s">해당 폴더의 절대 경로</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="4같은-부모-폴더-안에-있지만-다른-폴더에-있는-파일인-경우">4.같은 부모 폴더 안에 있지만 다른 폴더에 있는 파일인 경우</h2>
+
+<p>상위 폴더의 경우와 마찬가지로 절대 경로로 불러와야 한다.</p>]]></content><author><name>Johnny</name><email>mycoside@gmail.com</email></author><category term="python" /><summary type="html"><![CDATA[바로 본론으로 들어가자면…]]></summary></entry><entry><title type="html">[Python] selenium 기본 사용법</title><link href="http://localhost:4000/selenium/" rel="alternate" type="text/html" title="[Python] selenium 기본 사용법" /><published>2023-12-14T00:00:00+09:00</published><updated>2023-12-14T00:00:00+09:00</updated><id>http://localhost:4000/selenium</id><content type="html" xml:base="http://localhost:4000/selenium/"><![CDATA[]]></content><author><name>Johnny</name><email>mycoside@gmail.com</email></author><category term="python" /><category term="selenium" /><summary type="html"><![CDATA[]]></summary></entry></feed>

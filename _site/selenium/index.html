@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8" />
 
-<!-- begin _includes/seo.html --><title>[Python] 환경변수 .env 사용법 - 기록하는 습관</title>
-<meta name="description" content="dotenv를 사용해야 하는 이유">
+<!-- begin _includes/seo.html --><title>[Python] selenium 기본 사용법 - 기록하는 습관</title>
+<meta name="description" content="">
 
 
   <meta name="author" content="Johnny">
@@ -22,32 +22,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="기록하는 습관">
-<meta property="og:title" content="[Python] 환경변수 .env 사용법">
-<meta property="og:url" content="http://localhost:4000/dot-env/">
+<meta property="og:title" content="[Python] selenium 기본 사용법">
+<meta property="og:url" content="http://localhost:4000/selenium/">
 
 
-  <meta property="og:description" content="dotenv를 사용해야 하는 이유">
-
-
-
-  <meta property="og:image" content="http://localhost:4000/assets/images/2023-12-21/dot.png">
+  <meta property="og:description" content="">
 
 
 
-
-
-  <meta property="article:published_time" content="2024-01-04T00:00:00+09:00">
+  <meta property="og:image" content="http://localhost:4000/assets/images/2023-12-18/">
 
 
 
 
 
-  
+  <meta property="article:published_time" content="2023-12-14T00:00:00+09:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/dot-env/">
+
+<link rel="canonical" href="http://localhost:4000/selenium/">
 
 
 
@@ -164,7 +164,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">[Python] 환경변수 .env 사용법</li>
+        <li class="current">[Python] selenium 기본 사용법</li>
       
     
   </ol>
@@ -299,19 +299,19 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Python] 환경변수 .env 사용법" /> <meta
+    <meta itemprop="headline" content="[Python] selenium 기본 사용법" /> <meta
       itemprop="description"
-      content="dotenv를 사용해야 하는 이유" /> <meta
+      content="" /> <meta
       itemprop="datePublished"
-      content="2024-01-04T00:00:00+09:00" /> 
+      content="2023-12-14T00:00:00+09:00" /> 
 
     <div class="page__inner-wrap">
       
       <header>
         
         <h1 id="page-title" class="page__title p-name" itemprop="headline">
-          <a href="http://localhost:4000/dot-env/" class="u-url" itemprop="url"
-            ><p>[Python] 환경변수 .env 사용법</p>
+          <a href="http://localhost:4000/selenium/" class="u-url" itemprop="url"
+            ><p>[Python] selenium 기본 사용법</p>
 </a
           >
         </h1>
@@ -321,7 +321,7 @@
   <span class="page__meta-date">
     <i class="far fa-calendar-alt" aria-hidden="true"></i>
     
-    <time datetime="2024-01-04T00:00:00+09:00">2024 January 4</time>
+    <time datetime="2023-12-14T00:00:00+09:00">2023 December 14</time>
   </span>
    <span class="page__meta-sep"></span>   
 
@@ -345,53 +345,11 @@
                 <i class="fas fa-sort-down"></i> Table of Contents
               </h4>
             </header>
-            <ul class="toc__menu"><li><a href="#dotenv를-사용해야-하는-이유">dotenv를 사용해야 하는 이유</a></li><li><a href="#dotenv-설치">dotenv 설치</a></li><li><a href="#env-파일-생성">.env 파일 생성</a><ul><li><a href="#-env-">&lt; .env &gt;</a></li><li><a href="#-dot_envpy-">&lt; dot_env.py &gt;</a></li></ul></li></ul>
+            
 
           </nav>
         </aside>
-         <h2 id="dotenv를-사용해야-하는-이유">dotenv를 사용해야 하는 이유</h2>
-
-<p>개발을 하다 보면 외부에서 발급받은 API 키를 코드에 직접 사용하거나 데이터베이스 접속을 위해 id 또는 password 등을 입력해야 하는 상황이 있다</p>
-
-<p>이럴때 걱정되는 점 중의 하나가, git hub에 업로드한 repository를 private로 따로 설정을 해두지 않았다면 모든 사람에게 민감한 정보가 그대로 유출될 수 있다는 것이다</p>
-
-<p>보편적으로 .env는 웹 개발 환경에서 많이 사용되지만 필요하다면 파이썬에서도 이 기능을 쉽게 사용할 수 있다</p>
-
-<h2 id="dotenv-설치">dotenv 설치</h2>
-
-<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pip <span class="nb">install </span>python-dotenv
-</code></pre></div></div>
-
-<h2 id="env-파일-생성">.env 파일 생성</h2>
-
-<p><img src="/assets/images/2023-12-21/dot.png" alt="dotenv" /></p>
-
-<p>작업 폴더내 .env파일을 하나 생성하고</p>
-
-<h3 id="-env-">&lt; .env &gt;</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MY_ID</span> <span class="o">=</span> <span class="n">ILovePython</span>
-<span class="n">MY_PASSWORD</span> <span class="o">=</span> <span class="mi">1234</span>
-</code></pre></div></div>
-
-<p>왼쪽은 변수명, 그리고 오른쪽에는 값을 지정해준다</p>
-
-<h3 id="-dot_envpy-">&lt; dot_env.py &gt;</h3>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
-<span class="kn">from</span> <span class="n">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
-
-<span class="nf">load_dotenv</span><span class="p">()</span>
-
-<span class="nb">id</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">MY_ID</span><span class="sh">"</span><span class="p">)</span>
-<span class="n">pw</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">MY_PASSWORD</span><span class="sh">"</span><span class="p">)</span>
-
-<span class="nf">print</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">pw</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>사용할 파이썬 파일에서 위 처럼 불러와서 사용하면 된다 :)</p>
-
-<p class="notice--warning"><i class="material-symbols-outlined" style="vertical-align: middle;">check_circle</i> github에 commit 하기 전에 .gitignore에 .env를 잊지 말고 넣어주면 완료!</p>
+         
  
       </section>
 
@@ -406,9 +364,9 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#dot-env" class="page__taxonomy-item p-category" rel="tag">dot-env</a><span class="sep">, </span>
+      <a href="/tags/#python" class="page__taxonomy-item p-category" rel="tag">python</a><span class="sep">, </span>
     
-      <a href="/tags/#python" class="page__taxonomy-item p-category" rel="tag">python</a>
+      <a href="/tags/#selenium" class="page__taxonomy-item p-category" rel="tag">selenium</a>
     
     </span>
   </p>
@@ -417,18 +375,18 @@
 
  
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-01-04T00:00:00+09:00">2024 January 4</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-12-14T00:00:00+09:00">2023 December 14</time></p>
 
       </footer>
 
        
   <nav class="pagination">
     
-      <a href="/import-python-file/" class="pagination--pager" title="[Python] 다른 폴더에 module import(호출)하기
-">Previous</a>
+      <a href="#" class="pagination--pager disabled">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/OpenAPI/" class="pagination--pager" title="[Python] Open API 영화 데이터 수집 및 저장
+">Next</a>
     
   </nav>
 
@@ -441,6 +399,39 @@
   <div class="page__related">
     <h2 class="page__related-title">You may also enjoy</h2>
     <div class="grid__wrapper">  
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+      <a href="/dot-env/" rel="permalink"><p>[Python] 환경변수 .env 사용법</a>
+      
+    </h2>
+     
+<p class="page__meta">
+   
+  <span class="page__meta-date">
+    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+    
+    <time datetime="2024-01-04T00:00:00+09:00">2024 January 4</time>
+  </span>
+   <span class="page__meta-sep"></span>   
+
+  <span class="page__meta-readtime">
+    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+     less than 1 minute read 
+  </span>
+  
+</p>
+
+ 
+    <p class="archive__item-excerpt" itemprop="description">dotenv를 사용해야 하는 이유
+</p>
+    
+  </article>
+</div>
+   
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
@@ -502,39 +493,6 @@
 
  
     <p class="archive__item-excerpt" itemprop="description">Python에서 open api를 활용하여 데이터 수집 하는 방법을 알아보고, csv와 json으로 저장 하는 방법을 알아보자
-</p>
-    
-  </article>
-</div>
-   
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-      <a href="/selenium/" rel="permalink"><p>[Python] selenium 기본 사용법</a>
-      
-    </h2>
-     
-<p class="page__meta">
-   
-  <span class="page__meta-date">
-    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-    
-    <time datetime="2023-12-14T00:00:00+09:00">2023 December 14</time>
-  </span>
-   <span class="page__meta-sep"></span>   
-
-  <span class="page__meta-readtime">
-    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-     less than 1 minute read 
-  </span>
-  
-</p>
-
- 
-    <p class="archive__item-excerpt" itemprop="description">
 </p>
     
   </article>

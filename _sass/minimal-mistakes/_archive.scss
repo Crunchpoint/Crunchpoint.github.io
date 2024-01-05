@@ -85,16 +85,38 @@
   }
 }
 
+// .archive__item-teaser {
+//   position: relative;
+//   border-radius: $border-radius;
+//   overflow: hidden;
+
+//   img {
+//     width: 100%;
+//   }
+// }
+// 수정 start
 .archive__item-teaser {
   position: relative;
   border-radius: $border-radius;
   overflow: hidden;
 
+  display: flex;
+  justify-content: center;
+
+  background-color: mix(rgb(122, 122, 122), $background-color, 10%);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 8em;
+  // max-height: 10em;
+  margin-bottom: 5px;
+
   img {
     width: 100%;
+    position: relative; //absolute;
+    object-fit: cover;
   }
 }
-
+// 수정 end
 .archive__item-caption {
   position: absolute;
   bottom: 0;
@@ -149,8 +171,107 @@
   }
 }
 
+// .grid__item {
+//   margin-bottom: 2em;
+
+//   @include breakpoint($small) {
+//     float: left;
+//     width: span(5 of 10);
+
+//     &:nth-child(2n + 1) {
+//       clear: both;
+//       margin-left: 0;
+//     }
+
+//     &:nth-child(2n + 2) {
+//       clear: none;
+//       margin-left: gutter(of 10);
+//     }
+//   }
+
+//   @include breakpoint($medium) {
+//     margin-left: 0; /* override margin*/
+//     margin-right: 0; /* override margin*/
+//     width: span(3 of 12);
+
+//     &:nth-child(2n + 1) {
+//       clear: none;
+//     }
+
+//     &:nth-child(4n + 1) {
+//       clear: both;
+//     }
+
+//     &:nth-child(4n + 2) {
+//       clear: none;
+//       margin-left: gutter(1 of 12);
+//     }
+
+//     &:nth-child(4n + 3) {
+//       clear: none;
+//       margin-left: gutter(1 of 12);
+//     }
+
+//     &:nth-child(4n + 4) {
+//       clear: none;
+//       margin-left: gutter(1 of 12);
+//     }
+//   }
+
+//   .page__meta {
+//     margin: 0 0 4px;
+//     font-size: 0.6em;
+//   }
+
+//   .page__meta-sep {
+//     display: block;
+
+//     &::before {
+//       display: none;
+//     }
+//   }
+
+//   .archive__item-title {
+//     margin-top: 0.5em;
+//     font-size: $type-size-5;
+//   }
+
+//   .archive__item-excerpt {
+//     display: none;
+
+//     @include breakpoint($medium) {
+//       display: block;
+//       font-size: $type-size-6;
+//     }
+//   }
+
+//   .archive__item-teaser {
+//     @include breakpoint($small) {
+//       max-height: 200px;
+//     }
+
+//     @include breakpoint($medium) {
+//       max-height: 120px;
+//     }
+//   }
+// }
+
+// 수정 start
 .grid__item {
   margin-bottom: 2em;
+  transition: all 0.2s linear; //hover 시간 조정
+  // backdrop-filter: blur(10px);
+  opacity: 0.95;
+  height: 100%;
+  padding: 3px;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  // &:hover img {
+  //   transform: translate(0, -15px); //scale(1.1);
+  // }
 
   @include breakpoint($small) {
     float: left;
@@ -167,38 +288,51 @@
     }
   }
 
+  //grid 4배열에서 3배열
   @include breakpoint($medium) {
     margin-left: 0; /* override margin*/
     margin-right: 0; /* override margin*/
-    width: span(3 of 12);
+    width: span(4 of 12); //width: span(3 of 12);
+
+    min-height: 12em; //추가
 
     &:nth-child(2n + 1) {
+      //&:nth-child(2n + 1) {
       clear: none;
     }
 
-    &:nth-child(4n + 1) {
+    &:nth-child(3n + 1) {
+      //&:nth-child(4n + 1) {
       clear: both;
+      margin-left: 0;
     }
 
-    &:nth-child(4n + 2) {
+    &:nth-child(3n + 2) {
+      //&:nth-child(4n + 2) {
       clear: none;
       margin-left: gutter(1 of 12);
     }
 
-    &:nth-child(4n + 3) {
+    &:nth-child(3n + 3) {
+      //&:nth-child(4n + 3) {
       clear: none;
       margin-left: gutter(1 of 12);
     }
 
-    &:nth-child(4n + 4) {
+    /*
+      &:nth-child(4n + 4) {
       clear: none;
       margin-left: gutter(1 of 12);
-    }
+      }
+      */
   }
 
   .page__meta {
     margin: 0 0 4px;
     font-size: 0.6em;
+    // font-style: $myfont_grid_title;
+    font-weight: bold;
+    margin-top: 5px;
   }
 
   .page__meta-sep {
@@ -209,31 +343,35 @@
     }
   }
 
+  //참고 글 리스트
   .archive__item-title {
     margin-top: 0.5em;
-    font-size: $type-size-5;
+    font-size: $type-size-5; //$type-size-5;
   }
 
   .archive__item-excerpt {
-    display: none;
+    display: inline-block; //none;
 
     @include breakpoint($medium) {
       display: block;
-      font-size: $type-size-6;
+      font-size: 0.8em; //$type-size-6;
     }
   }
 
   .archive__item-teaser {
     @include breakpoint($small) {
-      max-height: 200px;
+      min-height: 130px;
+      //max-height: 200px;
+      background-size: contain; //비율 강제 고정
     }
 
     @include breakpoint($medium) {
-      max-height: 120px;
+      //max-height: 120px;
+      background-size: contain; //비율 강제 고정
     }
   }
 }
-
+// 수정 end
 /*
    Features
    ========================================================================== */
