@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 
 <!-- begin _includes/seo.html --><title>[Python] selenium 기본 사용법 - 기록하는 습관</title>
-<meta name="description" content="">
+<meta name="description" content="이 포스트의 설명은 chrome웹 브라우저를 기반으로, 다른 브라우저를 사용할 경우 아래 공식 홈페이지 참고">
 
 
   <meta name="author" content="Johnny">
@@ -26,11 +26,11 @@
 <meta property="og:url" content="http://localhost:4000/selenium/">
 
 
-  <meta property="og:description" content="">
+  <meta property="og:description" content="이 포스트의 설명은 chrome웹 브라우저를 기반으로, 다른 브라우저를 사용할 경우 아래 공식 홈페이지 참고">
 
 
 
-  <meta property="og:image" content="http://localhost:4000/assets/images/2023-12-18/">
+  <meta property="og:image" content="http://localhost:4000/assets/images/2023-12-14/01.png">
 
 
 
@@ -301,7 +301,7 @@
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[Python] selenium 기본 사용법" /> <meta
       itemprop="description"
-      content="" /> <meta
+      content="이 포스트의 설명은 chrome웹 브라우저를 기반으로, 다른 브라우저를 사용할 경우 아래 공식 홈페이지 참고" /> <meta
       itemprop="datePublished"
       content="2023-12-14T00:00:00+09:00" /> 
 
@@ -327,7 +327,7 @@
 
   <span class="page__meta-readtime">
     <i class="far fa-clock" aria-hidden="true"></i>
-     less than 1 minute read 
+     1 minute read 
   </span>
   
 </p>
@@ -345,11 +345,110 @@
                 <i class="fas fa-sort-down"></i> Table of Contents
               </h4>
             </header>
-            
+            <ul class="toc__menu"><li><a href="#1-selenium-소개">1. selenium 소개</a></li><li><a href="#2-selenium-설치">2. selenium 설치</a></li><li><a href="#3-코드작성-및-테스트">3. 코드작성 및 테스트</a><ul><li><a href="#--라이브러리-호출">- 라이브러리 호출</a></li><li><a href="#--수행할-기능-설정">- 수행할 기능 설정</a></li></ul></li><li><a href="#4-최종코드">4. 최종코드</a></li></ul>
 
           </nav>
         </aside>
-         
+         <p class="notice--warning">이 포스트의 설명은 chrome웹 브라우저를 기반으로, 다른 브라우저를 사용할 경우 아래 공식 홈페이지 참고</p>
+
+<p><a href="https://www.selenium.dev/">selenium 홈페이지 바로가기</a> <span class="material-symbols-outlined" style="vertical-align: middle;">link</span></p>
+
+<h2 id="1-selenium-소개">1. selenium 소개</h2>
+
+<p>selenium은 파이썬을 사용해서 웹 브라우저를 조작하기 위한 라이브러리이다</p>
+
+<p>아래 이미지는 selenium에서 제공하는 테스트 페이지이고 간단하게 Text input에 원하는 내용을 입력한 뒤, Submit버튼을 자동으로 누르는 코드를 작성 하려고 한다</p>
+
+<p><img src="/assets/images/2023-12-14/01.png" alt="image1" /></p>
+
+<h2 id="2-selenium-설치">2. selenium 설치</h2>
+
+<p>selenium과 자동으로 chrome driver의 버전 관리를 위해 autoinstaller도 함께 설치(권장)</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pip <span class="nb">install </span>selenium
+<span class="nv">$ </span>pip <span class="nb">install </span>chromedriver-autoinstaller
+</code></pre></div></div>
+
+<p><span style="color:gray; font-size:medium;"><em>이제 모든 준비는 완료… 드가자!</em></span></p>
+
+<h2 id="3-코드작성-및-테스트">3. 코드작성 및 테스트</h2>
+
+<h3 id="--라이브러리-호출">- 라이브러리 호출</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ChromeDriver 자동 설치 모듈
+</span><span class="kn">import</span> <span class="n">chromedriver_autoinstaller</span>
+<span class="c1"># Chrome을 제어하기 위한 객체
+</span><span class="kn">from</span> <span class="n">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="c1"># Chrome의 웹 페이지 로딩 완료까지 딜레이
+</span><span class="kn">from</span> <span class="n">selenium.webdriver.support.wait</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
+<span class="c1"># HTML요소 선택을 위해 사용
+</span><span class="kn">from</span> <span class="n">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="c1"># 결과를 눈으로 확인 하기 위한 강제 딜레이 적용 // 필수 x
+</span><span class="kn">import</span> <span class="n">time</span>
+
+<span class="c1"># 실행 시 자동으로 chromedriver의 버전을 확인하고 설치
+</span><span class="n">chromedriver_autoinstaller</span><span class="p">.</span><span class="nf">install</span><span class="p">()</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">Chrome</span><span class="p">()</span>
+
+<span class="c1"># 접속할 주소 (url 값은 실제 접속할 페이지의 주소로 변경)
+</span><span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">https://www.selenium.dev/selenium/web/web-form.html</span><span class="sh">"</span><span class="p">)</span>
+<span class="c1"># 최초 크롬 브라우저 가동 후 DOM이 로드 되고 해당 element가 생성되기 전까지 대기
+</span><span class="n">driver</span><span class="p">.</span><span class="nf">implicitly_wait</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="--수행할-기능-설정">- 수행할 기능 설정</h3>
+
+<p>이제 작업을 수행하기 위해 위에서 설명했듯이 Text-input과 Submit 버튼을 선택해 주어야 한다</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text_box</span> <span class="o">=</span> <span class="nc">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">5</span><span class="p">).</span><span class="nf">until</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">NAME</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="sh">"</span><span class="s">my-text</span><span class="sh">"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>5초의 대기 시간을 갖지만, 뒤에 해당 element를 찾는다면 대기를 종료</p>
+
+<p>by=<strong>By.NAME</strong>, value=”<strong>my-text</strong>“는 태그의 속성은 <strong>name</strong>이고 그 <strong>값으로 my-text</strong> 를 갖는 element를 선택 한다는 의미</p>
+
+<p><img src="/assets/images/2023-12-14/02.png" alt="image2" /></p>
+
+<p>웹 페이지에서 개발자도구를 열어서 확인해 보면 input 태그의 name이라는 속성이 있고 my-text라는 값을 갖고 있음을 알 수 있다</p>
+
+<p>마찬가지로 Submit 버튼도 선택</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">submit_button</span> <span class="o">=</span> <span class="nc">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">5</span><span class="p">).</span><span class="nf">until</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="sh">"</span><span class="s">button</span><span class="sh">"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>조금 다른점은 <strong>CSS_SELECTOR</strong>를 활용해서 대상을 선택 해보았다. 상황에 따라 여러 옵션을 활용해 볼 수 있다</p>
+
+<p>준비가 끝났으므로 바로 작동 시켜보자</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 위에 선택한 text_box에 send_keys라는 메서드에 인자값으로 "Selenium"을 전달 하면 입력이 실행 됩니다
+</span><span class="n">text_box</span><span class="p">.</span><span class="nf">send_keys</span><span class="p">(</span><span class="sh">"</span><span class="s">textbox에 입력할 문구를 입력하세요</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># 마찬가지로 버튼 클릭
+</span><span class="n">submit_button</span><span class="p">.</span><span class="nf">click</span><span class="p">()</span>
+<span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># 최종적으로 열려있는 브라우저를 종료 합니다
+</span><span class="n">driver</span><span class="p">.</span><span class="nf">quit</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="4-최종코드">4. 최종코드</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="n">selenium.webdriver.support.wait</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
+<span class="kn">from</span> <span class="n">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="kn">import</span> <span class="n">time</span>
+
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">Chrome</span><span class="p">()</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">https://www.selenium.dev/selenium/web/web-form.html</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">implicitly_wait</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">text_box</span> <span class="o">=</span> <span class="nc">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">5</span><span class="p">).</span><span class="nf">until</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">NAME</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="sh">"</span><span class="s">my-text</span><span class="sh">"</span><span class="p">))</span>
+<span class="n">submit_button</span> <span class="o">=</span> <span class="nc">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">5</span><span class="p">).</span><span class="nf">until</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">.</span><span class="nf">find_element</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="sh">"</span><span class="s">button</span><span class="sh">"</span><span class="p">))</span>
+<span class="n">text_box</span><span class="p">.</span><span class="nf">send_keys</span><span class="p">(</span><span class="sh">"</span><span class="s">Selenium</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">submit_button</span><span class="p">.</span><span class="nf">click</span><span class="p">()</span>
+<span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">driver</span><span class="p">.</span><span class="nf">quit</span><span class="p">()</span>
+</code></pre></div></div>
  
       </section>
 
@@ -562,6 +661,12 @@
 
 
 
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+  
+    <script src="/assets/js/clipboardrouge.js"></script>
+  
 
 
   </body>

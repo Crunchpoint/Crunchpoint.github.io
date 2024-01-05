@@ -2,10 +2,6 @@
 layout: single
 title: "[Python] 다른 폴더에 module import(호출)하기"
 tags: [python]
-toc: true
-toc_sticky: true
-toc_label: "Table of Contents"
-toc_icon: "sort-down"
 header:
   teaser: assets/images/2023-12-18/get_path.png
 ---

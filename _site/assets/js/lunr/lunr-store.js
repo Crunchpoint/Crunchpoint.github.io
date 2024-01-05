@@ -1,9 +1,9 @@
 var store = [{
         "title": "[Python] selenium 기본 사용법",
-        "excerpt":" ","categories": [],
+        "excerpt":"이 포스트의 설명은 chrome웹 브라우저를 기반으로, 다른 브라우저를 사용할 경우 아래 공식 홈페이지 참고 selenium 홈페이지 바로가기 link 1. selenium 소개 selenium은 파이썬을 사용해서 웹 브라우저를 조작하기 위한 라이브러리이다 아래 이미지는 selenium에서 제공하는 테스트 페이지이고 간단하게 Text input에 원하는 내용을 입력한 뒤, Submit버튼을 자동으로 누르는 코드를 작성 하려고 한다 2....","categories": [],
         "tags": ["python","selenium"],
         "url": "/selenium/",
-        "teaser": "/assets/images/2023-12-18/"
+        "teaser": "/assets/images/2023-12-14/01.png"
       },{
         "title": "[Python] Open API 영화 데이터 수집 및 저장",
         "excerpt":"Python에서 open api를 활용하여 데이터 수집 하는 방법을 알아보고, csv와 json으로 저장 하는 방법을 알아보자 사이트는 영화 진흥 위원회에서 제공하는 데이터를 받아올 예정이다 영화 진흥 위원회 바로가기 1. 회원가입 위 주소로 접속 후 로그인 버튼을 눌러서 회원 가입을 한다 키 발급 받기를 클릭 하고 사용목적과 관리명을 임의로 정해준 뒤, 사용url은...","categories": [],
