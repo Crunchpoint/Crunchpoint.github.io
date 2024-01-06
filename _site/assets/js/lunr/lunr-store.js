@@ -22,4 +22,10 @@ var store = [{
         "tags": ["dot-env","python"],
         "url": "/python/dot-env/",
         "teaser": "/assets/images/2023-12-21/dot.png"
+      },{
+        "title": "[vscode] user snippet 사용법",
+        "excerpt":"user snippet 이란? vscode에서 제공하는 기능으로, 자주 사용하는 코드를 미리 저장해두고 사용할 수 있게 해주는 기능이다 user snippet 사용법 1. vscode에서 ctrl + shift + p를 눌러서 명령어 창을 띄운다 2. 명령어 창에 snippet을 입력하고 Configure User Snippets를 선택 3. snippet을 사용할 영역을 선택 (3가지 옵션) 글로벌 영역에서 사용할 경우...","categories": ["editor"],
+        "tags": ["vscode","user snippet"],
+        "url": "/editor/user-snippet/",
+        "teaser": "/assets/images/2024-01-06/04.png"
       }]

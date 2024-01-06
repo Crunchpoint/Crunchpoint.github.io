@@ -2,7 +2,6 @@
 title: "Javascript"
 layout: archive
 permalink: categories/javascript
-classes: wide
 entries_layout: grid
 ---
 

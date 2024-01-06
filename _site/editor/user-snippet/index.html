@@ -9,22 +9,24 @@
   <head>
     <meta charset="utf-8" />
 
-<!-- begin _includes/seo.html --><title>Categories - 기록하는 습관</title>
-<meta name="description" content="Johnny’s development blog">
+<!-- begin _includes/seo.html --><title>[vscode] user snippet 사용법 - 기록하는 습관</title>
+<meta name="description" content="user snippet 이란?">
 
 
   <meta name="author" content="Johnny">
   
+  <meta property="article:author" content="Johnny">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="기록하는 습관">
-<meta property="og:title" content="Categories">
-<meta property="og:url" content="http://localhost:4000/categories/">
+<meta property="og:title" content="[vscode] user snippet 사용법">
+<meta property="og:url" content="http://localhost:4000/editor/user-snippet/">
 
 
-  <meta property="og:description" content="Johnny’s development blog">
+  <meta property="og:description" content="user snippet 이란?">
 
 
 
@@ -34,6 +36,8 @@
 
 
 
+  <meta property="article:published_time" content="2024-01-06T00:00:00+09:00">
+
 
 
 
@@ -43,7 +47,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/categories/">
+<link rel="canonical" href="http://localhost:4000/editor/user-snippet/">
 
 
 
@@ -100,7 +104,7 @@
 
   </head>
 
-  <body class="layout--categories wide">
+  <body class="layout--single wide">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -162,12 +166,25 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Categories
+          [vscode] user snippet 사용법
 
         
       </h1>
-      <!--  -->
+      <!-- 
+        <p class="page__lead"><h2 id="user-snippet-이란">user snippet 이란?</h2>
+</p>
+       -->
        
+<p class="page__meta">
+   
+  <span class="page__meta-date">
+    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+    
+    <time datetime="2024-01-06T00:00:00+09:00">2024 January 6</time>
+  </span>
+    
+</p>
+
 
       
       
@@ -175,7 +192,7 @@
   
   
 </div>
-    
+      
 
 
 
@@ -193,7 +210,17 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Categories</li>
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#editor" itemprop="item"><span itemprop="name">Editor</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[vscode] user snippet 사용법</li>
       
     
   </ol>
@@ -353,67 +380,160 @@
 
 
 
-  <div class="archive">
-     <div class="entries-">
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[vscode] user snippet 사용법" /> <meta
+      itemprop="description"
+      content="user snippet 이란?" /> <meta
+      itemprop="datePublished"
+      content="2024-01-06T00:00:00+09:00" /> 
 
+    <div class="page__inner-wrap">
+      
 
+      <section class="page__content e-content" itemprop="text">
+        
+        <aside class="sidebar__right sticky">
+          <nav class="toc">
+            <header>
+              <h4 class="nav__title">
+                <i class="fas fa-sort-down"></i> Table of Contents
+              </h4>
+            </header>
+            <ul class="toc__menu"><li><a href="#user-snippet-이란">user snippet 이란?</a></li><li><a href="#user-snippet-사용법">user snippet 사용법</a><ul><li><a href="#1-vscode에서-ctrl--shift--p를-눌러서-명령어-창을-띄운다">1. vscode에서 ctrl + shift + p를 눌러서 명령어 창을 띄운다</a></li><li><a href="#2-명령어-창에-snippet을-입력하고-configure-user-snippets를-선택">2. 명령어 창에 snippet을 입력하고 Configure User Snippets를 선택</a></li><li><a href="#3-snippet을-사용할-영역을-선택-3가지-옵션">3. snippet을 사용할 영역을 선택 (3가지 옵션)</a></li><li><a href="#4-snippet의-이름을-입력">4. snippet의 이름을 입력</a></li><li><a href="#5-사용할-코드를-입력">5. 사용할 코드를 입력</a></li><li><a href="#6-snippet-사용">6. snippet 사용</a></li></ul></li></ul>
 
+          </nav>
+        </aside>
+         <h2 id="user-snippet-이란">user snippet 이란?</h2>
 
+<p>vscode에서 제공하는 기능으로, 자주 사용하는 코드를 미리 저장해두고 사용할 수 있게 해주는 기능이다</p>
 
-<ul class="taxonomy__index">
+<h2 id="user-snippet-사용법">user snippet 사용법</h2>
+
+<h3 id="1-vscode에서-ctrl--shift--p를-눌러서-명령어-창을-띄운다">1. vscode에서 <code class="language-plaintext highlighter-rouge">ctrl + shift + p</code>를 눌러서 명령어 창을 띄운다</h3>
+
+<h3 id="2-명령어-창에-snippet을-입력하고-configure-user-snippets를-선택">2. 명령어 창에 <code class="language-plaintext highlighter-rouge">snippet</code>을 입력하고 <code class="language-plaintext highlighter-rouge">Configure User Snippets</code>를 선택</h3>
+
+<p><img src="/assets/images/2024-01-06/01.png" alt="user-snippet" /></p>
+
+<h3 id="3-snippet을-사용할-영역을-선택-3가지-옵션">3. <code class="language-plaintext highlighter-rouge">snippet</code>을 사용할 영역을 선택 (3가지 옵션)</h3>
+
+<ol>
+  <li>글로벌 영역에서 사용할 경우 <code class="language-plaintext highlighter-rouge">New Global Snippets file...</code></li>
+  <li>특정 프로젝트에서만 사용할 경우 <code class="language-plaintext highlighter-rouge">New Snippets file for 'project name'</code></li>
+  <li>특정 언어에서만 사용할 경우 <code class="language-plaintext highlighter-rouge">New Snippets file for 'language name'</code></li>
+</ol>
+
+<h3 id="4-snippet의-이름을-입력">4. <code class="language-plaintext highlighter-rouge">snippet</code>의 이름을 입력</h3>
+
+<p>본인이 알아보기 쉽게 이름을 지어주면 된다. (ex. <code class="language-plaintext highlighter-rouge">print hello python</code>)</p>
+
+<h3 id="5-사용할-코드를-입력">5. 사용할 코드를 입력</h3>
+
+<p>처음 스니펫을 생성하면 아래와 같이 비어있는 <code class="language-plaintext highlighter-rouge">snippet</code>이 생성된다</p>
+
+<p><img src="/assets/images/2024-01-06/02.png" alt="user-snippet" /></p>
+
+<p>이를 쉽게 생성하기 위해 <a href="https://snippet-generator.app" target="\_blank">https://snippet-generator.app</a> 에서 쉽게<code class="language-plaintext highlighter-rouge">snippet</code>을 생성할 수 있다</p>
+
+<p>사이트에 접속을 하면 아래와 같은 화면이 나오는데 각각 입력할 내용은 아래와 같다</p>
+
+<p><img src="/assets/images/2024-01-06/03.png" alt="user-snippet" width="80%" /></p>
+
+<ol>
+  <li>description : <code class="language-plaintext highlighter-rouge">snippet</code>의 설명</li>
+  <li>Tab trigger : <code class="language-plaintext highlighter-rouge">snippet</code>을 호출할 때 사용할 문구</li>
+  <li>Your snippet : <code class="language-plaintext highlighter-rouge">snippet</code>으로 사용할 코드를 입력</li>
+  <li>오른쪽 에 생성된 코드를 확인하고 오른쪽 하단의 <code class="language-plaintext highlighter-rouge">Copy snippet</code>을 눌러서 복사</li>
+  <li>vscode에서 <code class="language-plaintext highlighter-rouge">snippet</code>을 생성한 파일에 복사한 코드를 붙여넣기</li>
+</ol>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"test snippet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my_snippet"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"print(</span><span class="se">\"</span><span class="s2">hello python</span><span class="se">\"</span><span class="s2">)"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test snippet"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="6-snippet-사용">6. <code class="language-plaintext highlighter-rouge">snippet</code> 사용</h3>
+
+<p><code class="language-plaintext highlighter-rouge">snippet</code>을 사용할 때는 <code class="language-plaintext highlighter-rouge">Tab trigger</code>에 입력한 문구를 입력하고 <code class="language-plaintext highlighter-rouge">Tab</code>키를 누르면 된다</p>
+
+<p><img src="/assets/images/2024-01-06/05.gif" alt="user-snippet" width="70%" /></p>
+ 
+      </section>
+
+      <footer class="page__meta">
+         
   
-    
-      
-        <li>
-          <a href="#python">
-            <strong>python</strong> <span class="taxonomy__count">4</span>
-          </a>
-        </li>
-      
-    
-      
-    
+
+
   
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
     
-      
+      <a href="/tags/#user-snippet" class="page__taxonomy-item p-category" rel="tag">user snippet</a><span class="sep">, </span>
     
-      
+      <a href="/tags/#vscode" class="page__taxonomy-item p-category" rel="tag">vscode</a>
     
-  
-    
-      
-    
-      
-    
-  
-    
-      
-    
-      
-        <li>
-          <a href="#editor">
-            <strong>editor</strong> <span class="taxonomy__count">1</span>
-          </a>
-        </li>
-      
-    
-  
-</ul>
+    </span>
+  </p>
+
 
 
 
   
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
     
-      <section id="python" class="taxonomy__section">
-        <h2 class="archive__subtitle">python</h2>
-        <div class="entries-list">
-          
-            
+      <a href="/categories/#editor" class="page__taxonomy-item p-category" rel="tag">editor</a>
+    
+    </span>
+  </p>
+
+ 
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-01-06T00:00:00+09:00">2024 January 6</time></p>
+
+      </footer>
+
+       
+  <nav class="pagination">
+    
+      <a href="/python/dot-env/" class="pagination--pager" title="[Python] 환경변수 .env 사용법
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+   
+  <div class="page__related">
+    <h2 class="page__related-title">You may also enjoy</h2>
+    <div class="grid__wrapper"> 
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/2023-12-21/dot.png" alt="">
+      </div>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
@@ -437,14 +557,16 @@
 </p> -->
   </article>
 </div>
-
-          
-            
+  
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/2023-12-18/get_path.png" alt="">
+      </div>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
@@ -468,14 +590,16 @@
 </p> -->
   </article>
 </div>
-
-          
-            
+  
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/2023-12-18/01.png" alt="">
+      </div>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
@@ -499,14 +623,16 @@
 </p> -->
   </article>
 </div>
-
-          
-            
+  
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/2023-12-14/01.png" alt="">
+      </div>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
@@ -530,76 +656,9 @@
 </p> -->
   </article>
 </div>
-
-          
-        </div>
-        <a href="#page-title" class="back-to-top">Back to top &uarr;</a>
-      </section>
-    
-  
-    
-  
-
-  
-    
-  
-    
-  
-
-  
-    
-  
-    
-  
-
-  
-    
-  
-    
-      <section id="editor" class="taxonomy__section">
-        <h2 class="archive__subtitle">editor</h2>
-        <div class="entries-list">
-          
-            
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/editor/user-snippet/" rel="permalink">[vscode] user snippet 사용법
-</a>
-      
-    </h2>
-     
-<p class="page__meta">
-   
-  <span class="page__meta-date">
-    <i class="far fa-calendar-alt" aria-hidden="true"></i>
-    
-    <time datetime="2024-01-06T00:00:00+09:00">2024 January 6</time>
-  </span>
-    
-</p>
-
-
-    <!-- <p class="archive__item-excerpt" itemprop="description">user snippet 이란?
-</p> -->
-  </article>
-</div>
-
-          
-        </div>
-        <a href="#page-title" class="back-to-top">Back to top &uarr;</a>
-      </section>
-    
-  
-
-</div>
-    <!-- div class entries_layout 추가 -->
+ </div>
   </div>
+   
 </div>
 </div>
 
