@@ -4,7 +4,7 @@ title: "[vscode] user snippet 사용법"
 categories: [editor]
 tags: [vscode, user snippet]
 header:
-  teaser: /assets/images/2024-01-06/04.png
+  teaser: /assets/images/teaser_default.jpg
 ---
 
 ## user snippet 이란?
@@ -35,7 +35,7 @@ vscode에서 제공하는 기능으로, 자주 사용하는 코드를 미리 저
 
 ![user-snippet](/assets/images/2024-01-06/02.png)
 
-이를 쉽게 생성하기 위해 [https://snippet-generator.app](https://snippet-generator.app){: target="\_blank"} 에서 쉽게`snippet`을 생성할 수 있다
+이를 쉽게 작성하기 위해 [https://snippet-generator.app](https://snippet-generator.app){: target="\_blank"} 에서 `snippet`을 생성할 수 있다
 
 사이트에 접속을 하면 아래와 같은 화면이 나오는데 각각 입력할 내용은 아래와 같다
 
