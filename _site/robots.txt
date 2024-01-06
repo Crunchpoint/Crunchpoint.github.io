@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://crunchpoint.github.io/sitemap.xml
