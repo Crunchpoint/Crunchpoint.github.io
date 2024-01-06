@@ -5,7 +5,6 @@
 * {
   box-sizing: border-box;
   word-break: keep-all;
-
 }
 
 html {
@@ -82,7 +81,7 @@ audio:not([controls]) {
 
 a {
   color: $link-color;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* Apply focus state */
