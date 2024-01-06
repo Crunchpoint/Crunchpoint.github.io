@@ -111,7 +111,7 @@ author:
   links:
     - label: "Email"
       icon: "far fa-fw fa-envelope"
-      url: "mycoside@gmail.com"
+      url: "mailto:mycoside@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"

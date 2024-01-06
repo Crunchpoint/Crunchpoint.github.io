@@ -28,7 +28,6 @@
                 {% assign post_cnt = category[1].size %}
             {% endif %}
           {% endfor %}
-
             <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }} ({{ post_cnt }})</a></li>
           {% endfor %}
         </ul>
