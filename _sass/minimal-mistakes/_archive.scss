@@ -296,7 +296,7 @@
 
     min-height: 12em; //추가
 
-    &:nth-child(2n + 1) {
+    &:nth-(2n + 1) {
       //&:nth-child(2n + 1) {
       clear: none;
     }

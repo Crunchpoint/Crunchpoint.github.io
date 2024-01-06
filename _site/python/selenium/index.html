@@ -23,7 +23,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="기록하는 습관">
 <meta property="og:title" content="[Python] selenium 기본 사용법">
-<meta property="og:url" content="http://localhost:4000/selenium/">
+<meta property="og:url" content="http://localhost:4000/python/selenium/">
 
 
   <meta property="og:description" content="이 포스트의 설명은 chrome웹 브라우저를 기반으로, 다른 브라우저를 사용할 경우 아래 공식 홈페이지 참고">
@@ -47,7 +47,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/selenium/">
+<link rel="canonical" href="http://localhost:4000/python/selenium/">
 
 
 
@@ -94,7 +94,12 @@
  <!-- start custom head snippets -->
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
-
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/favicon.ico/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon.ico/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon.ico/favicon-16x16.png" />
+<link rel="mask-icon" href="http://localhost:4000/assets/favicon.ico/safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />
 <!-- end custom head snippets -->
 
   </head>
@@ -121,13 +126,13 @@
           <span class="site-subtitle">개발노트</span>
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="">About</a>
+              <a href="/about">About</a>
             </li><li class="masthead__menu-item">
-              <a href="">Dashboard</a>
+              <a href="/dashboard">Dashboard</a>
             </li><li class="masthead__menu-item">
-              <a href="">Projects</a>
+              <a href="/projects">Projects</a>
             </li><li class="masthead__menu-item">
-              <a href="">Contact</a>
+              <a href="/contact">Contact</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -162,6 +167,16 @@
           <meta itemprop="position" content="1" />
         </li>
         <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#python" itemprop="item"><span itemprop="name">Python</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
       
       
         <li class="current">[Python] selenium 기본 사용법</li>
@@ -203,15 +218,11 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
-        </li>
-      
 
       
         
           
-        
+            <li><a href="mycoside@gmail.com" rel="nofollow noopener noreferrer me"><i class="far fa-fw fa-envelope" aria-hidden="true"></i><span class="label">Email</span></a></li>
           
         
           
@@ -219,7 +230,9 @@
           
         
           
-            <li><a href="https://github.com/Crunchpoint?tab=repositories" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+        
+          
+            <li><a href="https://github.com/Crunchpoint?tab=repositories" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">gitHub</span></a></li>
           
         
           
@@ -230,13 +243,6 @@
 
       
 
-      
-        <li>
-          <a href="mailto:mycoside@gmail.com" rel="me" class="u-email">
-            <meta itemprop="email" content="mycoside@gmail.com" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
-          </a>
-        </li>
       
 
       
@@ -293,7 +299,35 @@
     </ul>
   </div>
 </div>
- 
+         
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">CATEGORIES</span>
+        
+
+        
+        <ul>
+          
+          
+          
+          
+          
+
+            <li><a href="/categories/python">Python (4)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>  
 </div>
 
 
@@ -310,7 +344,7 @@
       <header>
         
         <h1 id="page-title" class="page__title p-name" itemprop="headline">
-          <a href="http://localhost:4000/selenium/" class="u-url" itemprop="url"
+          <a href="http://localhost:4000/python/selenium/" class="u-url" itemprop="url"
             ><p>[Python] selenium 기본 사용법</p>
 </a
           >
@@ -323,13 +357,7 @@
     
     <time datetime="2023-12-14T00:00:00+09:00">2023 December 14</time>
   </span>
-   <span class="page__meta-sep"></span>   
-
-  <span class="page__meta-readtime">
-    <i class="far fa-clock" aria-hidden="true"></i>
-     1 minute read 
-  </span>
-  
+    
 </p>
 
 
@@ -472,6 +500,21 @@
 
 
 
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#python" class="page__taxonomy-item p-category" rel="tag">python</a>
+    
+    </span>
+  </p>
+
  
 
   <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-12-14T00:00:00+09:00">2023 December 14</time></p>
@@ -484,7 +527,7 @@
       <a href="#" class="pagination--pager disabled">Previous</a>
     
     
-      <a href="/OpenAPI/" class="pagination--pager" title="[Python] Open API 영화 데이터 수집 및 저장
+      <a href="/python/OpenAPI/" class="pagination--pager" title="[Python] Open API 영화 데이터 수집 및 저장
 ">Next</a>
     
   </nav>
@@ -497,103 +540,103 @@
    
   <div class="page__related">
     <h2 class="page__related-title">You may also enjoy</h2>
-    <div class="grid__wrapper">  
+    <div class="grid__wrapper"> 
+
+
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
+      <div class="archive__item-teaser">
+        <img src="/assets/images/2023-12-21/dot.png" alt="">
+      </div>
+    
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-      <a href="/dot-env/" rel="permalink"><p>[Python] 환경변수 .env 사용법</a>
+        <a href="/python/dot-env/" rel="permalink">[Python] 환경변수 .env 사용법
+</a>
       
     </h2>
      
 <p class="page__meta">
    
   <span class="page__meta-date">
-    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+    <i class="far fa-calendar-alt" aria-hidden="true"></i>
     
-    <time datetime="2024-01-04T00:00:00+09:00">2024 January 4</time>
+    <time datetime="2023-12-21T00:00:00+09:00">2023 December 21</time>
   </span>
-   <span class="page__meta-sep"></span>   
-
-  <span class="page__meta-readtime">
-    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-     less than 1 minute read 
-  </span>
-  
+    
 </p>
 
- 
-    <p class="archive__item-excerpt" itemprop="description">dotenv를 사용해야 하는 이유
-</p>
-    
+
+    <!-- <p class="archive__item-excerpt" itemprop="description">dotenv를 사용해야 하는 이유
+</p> -->
   </article>
 </div>
-   
+  
+
+
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
+      <div class="archive__item-teaser">
+        <img src="/assets/images/2023-12-18/get_path.png" alt="">
+      </div>
+    
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-      <a href="/import-python-file/" rel="permalink"><p>[Python] 다른 폴더에 module import(호출)하기</a>
+        <a href="/python/import-python-file/" rel="permalink">[Python] 다른 폴더에 module import(호출)하기
+</a>
       
     </h2>
      
 <p class="page__meta">
    
   <span class="page__meta-date">
-    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+    <i class="far fa-calendar-alt" aria-hidden="true"></i>
     
     <time datetime="2023-12-18T00:00:00+09:00">2023 December 18</time>
   </span>
-   <span class="page__meta-sep"></span>   
-
-  <span class="page__meta-readtime">
-    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-     less than 1 minute read 
-  </span>
-  
-</p>
-
- 
-    <p class="archive__item-excerpt" itemprop="description">바로 본론으로 들어가자면…
-</p>
     
+</p>
+
+
+    <!-- <p class="archive__item-excerpt" itemprop="description">다른폴더에 있는 module 호출
+</p> -->
   </article>
 </div>
-   
+  
+
+
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
+      <div class="archive__item-teaser">
+        <img src="/assets/images/2023-12-18/01.png" alt="">
+      </div>
+    
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-      <a href="/OpenAPI/" rel="permalink"><p>[Python] Open API 영화 데이터 수집 및 저장</a>
+        <a href="/python/OpenAPI/" rel="permalink">[Python] Open API 영화 데이터 수집 및 저장
+</a>
       
     </h2>
      
 <p class="page__meta">
    
   <span class="page__meta-date">
-    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+    <i class="far fa-calendar-alt" aria-hidden="true"></i>
     
     <time datetime="2023-12-18T00:00:00+09:00">2023 December 18</time>
   </span>
-   <span class="page__meta-sep"></span>   
-
-  <span class="page__meta-readtime">
-    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-     1 minute read 
-  </span>
-  
-</p>
-
- 
-    <p class="archive__item-excerpt" itemprop="description">Python에서 open api를 활용하여 데이터 수집 하는 방법을 알아보고, csv와 json으로 저장 하는 방법을 알아보자
-</p>
     
+</p>
+
+
+    <!-- <p class="archive__item-excerpt" itemprop="description">Python에서 open api를 활용하여 데이터 수집 하는 방법을 알아보고, csv와 json으로 저장 하는 방법을 알아보자
+</p> -->
   </article>
 </div>
  </div>

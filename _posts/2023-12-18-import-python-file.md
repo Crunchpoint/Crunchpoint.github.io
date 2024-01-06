@@ -1,10 +1,13 @@
 ---
 layout: single
 title: "[Python] 다른 폴더에 module import(호출)하기"
+categories: [python]
 tags: [python]
 header:
   teaser: assets/images/2023-12-18/get_path.png
 ---
+
+# 다른폴더에 있는 module 호출
 
 바로 본론으로 들어가자면...
 

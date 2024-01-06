@@ -3,10 +3,20 @@ main:
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
-    url: #
+    url: /about
   - title: "Dashboard"
-    url: #
+    url: /dashboard
   - title: "Projects"
-    url: #
+    url: /projects
   - title: "Contact"
-    url: #
+    url: /contact
+
+categories:
+  - title: "CATEGORIES"
+    children:
+      - title: "Python"
+        url: /categories/python
+        category: python
+      # - title: "Javascript"
+      #   url: /categories/javascript
+      #   category: javascript

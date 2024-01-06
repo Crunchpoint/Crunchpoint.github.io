@@ -106,12 +106,12 @@ author:
   name: "Johnny"
   avatar: "/assets/images/profile.jpeg"
   bio: "웹 개발과 빅데이터 분석을 공부하고 있습니다"
-  location: "Seoul, Korea"
-  email: "mycoside@gmail.com"
+  #location: "Seoul, Korea"
+  email: #"mycoside@gmail.com"
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      icon: "far fa-fw fa-envelope"
+      url: "mycoside@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -121,7 +121,7 @@ author:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "GitHub"
+    - label: "gitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Crunchpoint?tab=repositories"
     - label: "codepen"
@@ -269,6 +269,18 @@ compress_html:
 
 # Defaults
 defaults:
+  # _index
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      sidebar:
+        nav: "categories"
+      # header:
+      #   overlay_image: https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+      #   overlay_filter: 0.5
   # _posts
   - scope:
       path: ""
@@ -277,7 +289,7 @@ defaults:
       layout: single
       author_profile: true
       show_date: true
-      read_time: true
+      read_time: false
       toc: true
       toc_sticky: true
       toc_label: "Table of Contents"
@@ -285,6 +297,12 @@ defaults:
       comments: false
       share: false
       related: true
+      sidebar:
+        nav: "categories"
+      # header:
+      #   overlay_image: https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+      #   overlay_filter: 0.5
+
 # added
 after_footer_scripts:
   - https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js
