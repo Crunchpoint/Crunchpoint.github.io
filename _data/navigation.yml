@@ -12,11 +12,13 @@ main:
     url: /contact
 
 categories:
-  - title: "CATEGORIES"
+  - title: "Programming Languages"
     children:
       - title: "Python"
         url: /categories/python
         category: python
-      - title: "IDE & Editor"
-        url: /categories/editor
-        category: editor
+  - title: "IDE & Editors"
+    children:
+      - title: "VS Code"
+        url: /categories/vscode
+        category: vscode

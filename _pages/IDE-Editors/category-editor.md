@@ -1,9 +1,9 @@
 ---
 title: "IDE & Editor"
 layout: archive
-permalink: categories/editor
+permalink: categories/vscode
 entries_layout: grid
 ---
 
-{% assign posts = site.categories.editor %}
+{% assign posts = site.categories.vscode %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}

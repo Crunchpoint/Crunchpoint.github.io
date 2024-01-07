@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "[vscode] user snippet 사용법"
-categories: [editor]
+categories: [vscode]
 tags: [vscode, user snippet]
 header:
   teaser: /assets/images/teaser_default.jpg
