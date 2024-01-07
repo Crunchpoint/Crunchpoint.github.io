@@ -15,6 +15,7 @@ title: "About"
 좋은 하루 보내세요!
 
 > "I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it." - Bill Gates
+> "어려운 일은 게으른 사람에게 맡긴다. 게으른 사람은 쉽게 일을 하기 위한 방법을 찾을 것이기 때문이다."
 
-사실 일을 쉽게 하기 위한 배경에는 더 많은 노력이 있다고 생각합니다.
+사실 일을 쉽게 하기 위한 방법을 찾아내는 배경에는 더 많은 노력이 숨겨져 있다고 생각합니다.
 {: style="color:gray; font-size: 70%;"}
