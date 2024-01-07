@@ -55,12 +55,15 @@ incremental: false
 $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
 ```
 
+<br />
 $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+<br /><br />
 
 ```latex
 % 정규분포
 
-$$f(x | \mu, \sigma^2) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x - \mu}{\sigma}\right)^2}$$
+$f(x | \mu, \sigma^2) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x - \mu}{\sigma}\right)^2}$
 ```
 
-$$f(x | \mu, \sigma^2)$ = $\frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x - \mu}{\sigma}\right)^2}$$
+<br />
+$f(x | \mu, \sigma^2)$ = $\frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x - \mu}{\sigma}\right)^2}$
