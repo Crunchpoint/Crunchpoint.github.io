@@ -4,7 +4,7 @@ title: "[Python] 다른 폴더의 module import(호출)하기"
 categories: [python]
 tags: [python]
 header:
-  teaser: assets/images/teaser_python.jpg
+  teaser: assets/images/teasers/teaser_python.webp
 ---
 
 # 다른폴더에 있는 module 호출

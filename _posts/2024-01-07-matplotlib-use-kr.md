@@ -1,10 +1,10 @@
 ---
 layout: single
-title: "[python] matplotlib 에서 한글 사용하기"
+title: "[Python] matplotlib 에서 한글 사용하기"
 categories: [python]
 tags: [python, matplotlib]
 header:
-  teaser: /assets/images/teaser_python.jpg
+  teaser: /assets/images/teasers/teaser_python.webp
 ---
 
 matplotlib에서는 기본적으로 한글을 지원하지 않는다. 따라서 한글을 사용하기 위해서는 한글 폰트를 설정 해줘야 한다.

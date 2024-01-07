@@ -22,3 +22,8 @@ categories:
       - title: "VS Code"
         url: /categories/vscode
         category: vscode
+  - title: "etc"
+    children:
+      - title: "github blog"
+        url: /categories/github-blog
+        category: github-blog

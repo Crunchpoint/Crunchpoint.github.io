@@ -4,7 +4,7 @@ title: "[vscode] user snippet 사용법"
 categories: [vscode]
 tags: [vscode, user snippet]
 header:
-  teaser: /assets/images/teaser_default.jpg
+  teaser: /assets/images/teasers/teaser_default.webp
 ---
 
 ## user snippet 이란?
