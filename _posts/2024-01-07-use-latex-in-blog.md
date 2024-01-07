@@ -47,10 +47,20 @@ incremental: false
 
 ## 3. latex 사용하기
 
-이제 latex문법을 사용하여 아래와 같이 수식을 작성하면 된다.
+이제 latex문법을 사용하여 아래와 같이 수식을 작성하면 아래와 같이 정상적으로 표시가 된다.
 
 ```latex
-$f(x) = (1/√(2πσ2)) (e[-(x-μ)^2]/2σ^2)$
+% 이차방정식
+
+$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
 ```
 
-$f(x) = (1/√(2πσ2)) (e[-(x-μ)^2]/2σ^2)$
+$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+
+```latex
+% 정규분포
+
+$$f(x | \mu, \sigma^2) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x - \mu}{\sigma}\right)^2}$$
+```
+
+$$f(x | \mu, \sigma^2)$ = $\frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x - \mu}{\sigma}\right)^2}$$
