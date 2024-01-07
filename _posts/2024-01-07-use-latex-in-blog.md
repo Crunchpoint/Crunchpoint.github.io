@@ -23,7 +23,7 @@ excerpt_separator: "\n\n"
 incremental: false
 ```
 
-## 2. \_include\scipts.html 파일 수정
+## 2. \_include/scipts.html 파일 수정
 
 해당 파일에 맨 아래에 다음과 같은 코드를 추가해준다.
 
