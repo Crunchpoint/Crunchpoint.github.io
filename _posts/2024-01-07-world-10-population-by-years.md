@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[Python] Pandas와 Matplotlib를 이용한 데이터 시각화 예제 (세계 top10 인구 변화)"
+title: "[Python] Pandas와 Matplotlib을 이용한 데이터 시각화 예제 (세계 top10 인구 변화)"
 categories: [python]
 tags: [Python, Pandas, Matplotlib]
 header:
