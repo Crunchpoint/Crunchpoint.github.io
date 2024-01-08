@@ -456,18 +456,25 @@ df
 # filter를 이용하여 컬럼명에 population이 포함된 컬럼만 추출한다.
 # 속성 T는 transpose() 메서드에 대한 약어로 행과 열을 바꾼다.
 plt.plot(df.filter(like="population").T, marker="o", label=df.index)
+
 # 그래프의 제목
 plt.title("연도에 따른 인구수 변화 (세계 인구 top10)")
+
 # x축 라벨
 plt.xlabel("연도")
+
 # y축 라벨
 plt.ylabel("인구수")
+
 # y축 눈금 설정 (1e8은 1억을 의미하고 이를 15번 반복하면서 15억까지 표시한다.)
 plt.yticks([1e8 * i for i in range(1, 16)], [f"{i}억명" for i in range(1, 16)])
+
 # 그리드 표시
 plt.grid()
+
 # 범례 표시
 plt.legend(title="국가", loc="upper left", bbox_to_anchor=(1, 1))
+
 # 그래프 출력
 plt.show()
 plt.close()
@@ -499,9 +506,11 @@ df = origin.copy().head(10).set_index("cca3")
 df = df[df.columns[::-1]]
 
 plt.plot(df.filter(like="population").T, marker="o", label=df.index)
+
 plt.title("연도에 따른 인구수 변화 (세계 인구 top10)")
 plt.xlabel("연도")
 plt.ylabel("인구수")
+
 plt.yticks([1e8 * i for i in range(1, 16)], [f"{i}억명" for i in range(1, 16)])
 plt.grid()
 plt.legend(title="국가", loc="upper left", bbox_to_anchor=(1, 1))
