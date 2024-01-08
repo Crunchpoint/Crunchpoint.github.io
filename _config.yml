@@ -281,7 +281,7 @@ defaults:
         nav: "categories"
       header:
         overlay_image: assets/images/hero.jpg
-        overlay_filter: 0.1
+        overlay_filter: 0
   # _posts
   - scope:
       path: ""
@@ -303,7 +303,7 @@ defaults:
         nav: "categories"
       header:
         overlay_image: assets/images/hero.jpg
-        overlay_filter: 0.1
+        overlay_filter: 0
 
 # added
 after_footer_scripts:

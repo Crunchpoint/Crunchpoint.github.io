@@ -8,13 +8,14 @@ title: "Contact"
 
 <br/>
 <br/>
+
 <form class="contact_form" action="https://formspree.io/f/mkndwwgb" method="POST">
 <!--<form action="/submit_form" method="POST">-->
   <div class="input_container">
-    <input type="text" name="name" placeholder="Name" />
-    <input type="email" name="_replyto" placeholder="Email" />
+    <input type="text" name="name" placeholder="Name" required/>
+    <input type="email" name="_replyto" placeholder="Email" required/>
   </div>
   <br />
-  <textarea name="message" placeholder="Message" maxlength="500"></textarea>
+  <textarea name="message" placeholder="Message" maxlength="500" required></textarea>
   <button type="submit">Submit</button>
 </form>
