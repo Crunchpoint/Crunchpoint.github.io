@@ -30,9 +30,9 @@ masthead_title: "기록하는 습관"
 breadcrumbs: true
 words_per_minute: 200
 comments:
-  provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider: disqus #"false", "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname: github-blog-oq6r9rkkwk
   discourse:
     server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -291,12 +291,12 @@ defaults:
       author_profile: true
       show_date: true
       read_time: false
+      comments: true
       # classes: wide
       toc: true
       toc_sticky: true
       toc_label: "Table of Contents"
       toc_icon: "sort-down"
-      comments: false
       share: false
       related: true
       sidebar:
