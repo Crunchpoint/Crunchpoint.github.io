@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "[utilities] 윈도우 추천 탐색 프로그램 everything"
-categories: [utilites]
+categories: [utilities]
 tags: [windows, utilities, everything]
 header:
   teaser: /assets/images/teasers/teaser_default.webp
