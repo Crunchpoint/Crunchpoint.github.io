@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[Blog] github 블로그에서 latex 사용하기"
+title: "[Blog] github(jekyll) 블로그에서 latex 사용하기"
 categories: [github-blog]
 tags: [github-blog, latex]
 header:
