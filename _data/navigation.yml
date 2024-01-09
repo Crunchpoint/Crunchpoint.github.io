@@ -27,3 +27,6 @@ categories:
       - title: "github blog"
         url: /categories/github-blog
         category: github-blog
+      - title: "utilities"
+        url: /categories/utilities
+        category: utilities
