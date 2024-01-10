@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[utilities] 윈도우 추천 탐색 프로그램 everything"
+title: "[Utilities] 윈도우 추천 탐색 프로그램 everything"
 categories: [utilities]
 tags: [windows, utilities, everything]
 header:
