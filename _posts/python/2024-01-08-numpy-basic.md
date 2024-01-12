@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[Python] numpy 기본 사용법 (1) - 배열 생성, 형변환, 차원 확인, 함수를 사용한 연산"
+title: "[Python] numpy 기본 사용법 - 배열 생성, 형변환, 연산, 조건식"
 categories: [python]
 tags: [Python, numpy]
 header:
@@ -68,4 +68,26 @@ print(plus, minus, multiply, divide, sep="\n")
 # [10. 10. 10. 10. 10.]
 ```
 
-> numpy 기본 사용법 (2)로 이어집니다.
+## 5. numpy의 함수를 사용한 조건식
+
+각각 and, or, not에 포함된 두 조건식은 같은 결과를 리턴한다.
+
+```python
+arr1 = np.array([10, 20, 30, 40, 50])
+
+# and 조건
+print(arr1[np.logical_and(arr1 > 20, arr1 < 40)])
+print(arr1[(arr1 > 20) & (arr1 < 40)])
+
+# or 조건
+print(arr1[np.logical_or(arr1 < 20, arr1 > 40)])
+print(arr1[(arr1 < 20) | (arr1 > 40)])
+
+# not 조건
+print(arr1[np.logical_not(arr1 == 30)])
+print(arr1[~(arr1 == 30)])
+
+# [30]
+# [10 50]
+# [10 20 40 50]
+```
