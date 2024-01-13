@@ -9,7 +9,7 @@ header:
 
 # github 블로그에서 latex 사용하기
 
-github 블로그에서는 기본즉올 latex을 지원하지 않는다. 따라서 latex문법을 사용하기 위해서는 몇가지 설정을 해주어야 한다.
+github 블로그에서는 기본적으로 latex을 지원하지 않는다. 따라서 latex문법을 사용하기 위해서는 몇가지 설정을 해주어야 한다.
 
 ## 1. \_config.yml 파일 수정
 
