@@ -24,6 +24,9 @@ categories:
         category: vscode
   - title: "etc"
     children:
+      - title: "oracle"
+        url: /categories/oracle
+        category: oracle
       - title: "github blog"
         url: /categories/github-blog
         category: github-blog
