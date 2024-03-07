@@ -1,5 +1,5 @@
 ---
-title: "oracle"
+title: "Oracle"
 layout: archive
 permalink: categories/oracle
 entries_layout: grid

@@ -17,17 +17,22 @@ categories:
       - title: "Python"
         url: /categories/python
         category: python
+
+  - title: "Cloud Computing"
+    children:
+      - title: "Oracle"
+        url: /categories/oracle
+        category: oracle
+
   - title: "IDE & Editors"
     children:
       - title: "VS Code"
         url: /categories/vscode
         category: vscode
+
   - title: "etc"
     children:
-      - title: "oracle"
-        url: /categories/oracle
-        category: oracle
-      - title: "github blog"
+      - title: "github-blog"
         url: /categories/github-blog
         category: github-blog
       - title: "Utilities"
