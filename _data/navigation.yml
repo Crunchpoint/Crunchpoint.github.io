@@ -18,6 +18,12 @@ categories:
         url: /categories/python
         category: python
 
+  - title: "OS"
+    children:
+      - title: "Linux"
+        url: /categories/linux
+        category: linux
+
   - title: "Cloud Computing"
     children:
       - title: "Oracle"

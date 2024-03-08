@@ -482,7 +482,7 @@ plt.close()
 
 ### 출력 결과 확인
 
-![Alt text](/assets/images/2024-01-07/02.png)
+![Alt text](/assets/images/2024/2024-01-07/02.png)
 
 ## 4. 최종 코드
 

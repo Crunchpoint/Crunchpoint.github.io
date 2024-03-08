@@ -23,7 +23,7 @@ header:
 
 [https://www.voidtools.com/ko-kr/downloads/](https://www.voidtools.com/ko-kr/downloads/) 에서 다운로드 받아 설치하면 된다.
 
-![everything](/assets/images/2024-01-08/everything.png)
+![everything](/assets/images/2024/2024-01-08/everything.png)
 
 ## 2. 사용법
 
@@ -31,7 +31,7 @@ header:
 
 `everything`을 처음 실행할 때 로컬 NTFS 볼륨 색인을 생성하므로 색인이 완료될 때까지 수 초가 걸릴 수 있다.
 
-![everything](/assets/images/2024-01-08/everything_search.png)
+![everything](/assets/images/2024/2024-01-08/everything_search.png)
 
 또 하나의 이 프로그램을 강력 추천하는 이유는, 내장된 구문과 상용구 그리고 함수를 사용하여 원하는 파일을 디테일하게 찾아낼 수 있다.
 

@@ -73,6 +73,6 @@ plt.close()
 
 ### 출력결과
 
-![matplotlib_use_kr](/assets/images/2024-01-07/01.png)
+![matplotlib_use_kr](/assets/images/2024/2024-01-07/01.png)
 
 한글과 음수 기호가 제대로 표시되는 것을 확인할 수 있다.

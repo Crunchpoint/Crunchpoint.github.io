@@ -4,7 +4,7 @@ title: "[Python] wordcloud 사용법 - 단어 빈도수 시각화 (jupyter noteb
 categories: [python]
 tags: [Python, wordcloud]
 header:
-  teaser: /assets/images/2024-02-01/harry_mask.png
+  teaser: /assets/images/2024/2024-02-01/harry_mask.png
 ---
 
 # wordcloud 사용법 - 단어 빈도수 시각화
@@ -13,7 +13,7 @@ header:
 
 이번 포스팅에서는 해리포터와 마법사의 돌 원문을 사용하여 시각화를 진행했다.
 
-![harry_mask](/assets/images/2024-02-01/harry_mask.png){:width="350px"}
+![harry_mask](/assets/images/2024/2024-02-01/harry_mask.png){:width="350px"}
 
 ## 1. wordcloud 설치
 
@@ -43,7 +43,7 @@ $ pip install ipython
 
 단, 이미지는 흑백에 배경은 흰색으로 되어있는 실루엣 이미지가 좋다.(이미지 마스크를 사용하지 않을경우 생략)
 
-![potter](/assets/images/2024-02-01/potter.png){:width="350px"}
+![potter](/assets/images/2024/2024-02-01/potter.png){:width="350px"}
 
 ## 4. wordcloud 기본 사용법
 
@@ -70,7 +70,7 @@ display(Image(filename="wordcloud.png"))
 
 아래처럼 기본 설정으로 워드클라우드를 그린 결과를 확인할 수 있다.
 
-![wordcloud](/assets/images/2024-02-01/basic.png)
+![wordcloud](/assets/images/2024/2024-02-01/basic.png)
 
 ## 5. 이미지 마스크 사용하기
 
@@ -128,7 +128,7 @@ display(Image(filename="harry_mask.png"))
 
 짜잔!
 
-![harry_mask](/assets/images/2024-02-01/harry_mask.png)
+![harry_mask](/assets/images/2024/2024-02-01/harry_mask.png)
 
 ## 6. 최종 코드
 

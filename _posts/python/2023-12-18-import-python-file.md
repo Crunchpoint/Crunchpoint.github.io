@@ -37,7 +37,7 @@ from 하위폴더.다른파일.py import 내모듈
 
 하지만 폴더 구조가 복잡할 경우를 대비해서 제일 상위 폴더를 잡아놓는게 일반적이다.
 
-![copy-path](/assets/images/2023-12-18/get_path.png)
+![copy-path](/assets/images/2023/2023-12-18/get_path.png)
 
 vscode 기준으로 절대 경로를 얻는 방법은 폴더를 오른쪽 클릭 후 copy path를 선택하면 복사가 된다.
 
