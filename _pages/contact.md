@@ -16,5 +16,15 @@ title: "Contact"
   </div>
   <br />
   <textarea name="message" placeholder="Message" maxlength="500" required></textarea>
-  <button type="submit">Submit</button>
+  <button class="btn" type="submit">Submit</button>
 </form>
+
+<script>
+  const form = document.querySelector('.contact_form');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('메시지가 전송되었습니다. 감사합니다!');
+    this.submit();
+  });
+</script>
