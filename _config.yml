@@ -124,7 +124,7 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url: "https://github.com/Crunchpoint?tab=repositories"
-    - label: "codepen"w
+    - label: "codepen"
       icon: "fab fa-fw fa-codepen"
       # url: "https://codepen.io/Crunchpoint"
 
