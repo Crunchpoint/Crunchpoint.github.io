@@ -111,7 +111,7 @@ author:
   links:
     - label: "Email"
       icon: "far fa-fw fa-envelope"
-      url: "mailto:mycoside@gmail.com"
+      # url: "mailto:mycoside@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -121,16 +121,19 @@ author:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "gitHub"
+    - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/Crunchpoint?tab=repositories"
-    - label: "codepen"
+      # url: "https://github.com/Crunchpoint?tab=repositories"
+    - label: "codepen"w
       icon: "fab fa-fw fa-codepen"
-      url: "https://codepen.io/Crunchpoint"
+      # url: "https://codepen.io/Crunchpoint"
 
 # Site Footer
 footer:
   links:
+    - label: "Email"
+      icon: "far fa-fw fa-envelope"
+      url: "mailto:mycoside@gmail.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
@@ -139,7 +142,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/Crunchpoint?tab=repositories"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -149,6 +152,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+    - label: "codepen"
+      icon: "fab fa-fw fa-codepen"
+      url: "https://codepen.io/Crunchpoint"
 
 # Reading Files
 include:

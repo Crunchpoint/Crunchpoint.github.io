@@ -12,6 +12,12 @@ main:
     url: /contact
 
 categories:
+  - title: "Data Analysis"
+    children:
+      - title: "Machine Learning"
+        url: /categories/ML
+        category: ML
+
   - title: "Programming Languages"
     children:
       - title: "Python"
@@ -30,14 +36,11 @@ categories:
         url: /categories/oracle
         category: oracle
 
-  - title: "IDE & Editors"
+  - title: "etc"
     children:
       - title: "VS Code"
         url: /categories/vscode
         category: vscode
-
-  - title: "etc"
-    children:
       - title: "github-blog"
         url: /categories/github-blog
         category: github-blog
