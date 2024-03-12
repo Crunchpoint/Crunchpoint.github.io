@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: archive
 permalink: /dashboard
 title: "Dashboard"
 ---

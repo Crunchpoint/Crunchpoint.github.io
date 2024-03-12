@@ -14,9 +14,10 @@
   max-width: 100%;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
-
+  // 와이드 페이지 수정
   @include breakpoint($x-large) {
-    max-width: $max-width;
+    // max-width: $max-width;
+    max-width: $xx-large;
   }
 }
 
@@ -565,12 +566,14 @@ body {
 
 .wide {
   .page {
+    // 와이드 페이지 수정
     @include breakpoint($large) {
-      padding-right: 0;
+      // padding-right: 0;
+      padding-right: 200px;
     }
-
     @include breakpoint($x-large) {
-      padding-right: 0;
+      // padding-right: 0;
+      padding-right: 300px;
     }
   }
 
