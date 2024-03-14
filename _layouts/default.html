@@ -11,6 +11,18 @@
 <html lang="{{ site.locale | slice: 0,2 | default: 'en' }}" class="no-js">
   <head>
     {% include head.html %} {% include head/custom.html %}
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sbar = document.querySelector(".sidebar__top");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 100) {
+            sbar.style.right = "2em";
+          } else {
+            sbar.style.right = "-2em";
+          }
+        });
+      });
+    </script>
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
