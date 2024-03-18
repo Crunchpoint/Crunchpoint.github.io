@@ -9,7 +9,7 @@ title: "Contact"
 <br/>
 <br/>
 
-<form id="contact_form" class="contact_form" action="http://158.179.161.141/submit_form" method="POST">
+<form id="contact_form" class="contact_form" action="https://158.179.161.141/submit_form" method="POST">
   <div class="input_container">
     <input type="text" name="name" placeholder="Name" required/>
     <input type="email" name="email" placeholder="Email" required/>
