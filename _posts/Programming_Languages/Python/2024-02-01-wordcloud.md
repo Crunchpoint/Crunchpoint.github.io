@@ -35,7 +35,7 @@ $ pip install ipython
 
 이번 예제에 사용된 해리포터와 마법사의 돌 원문은 아래 링크에서 다운로드 받을 수 있다.
 
-[<u style="font-weight: bold">해리포터와 마법사의 돌 원문 링크</u>]("https://github.com/amephraim/nlp/blob/master/texts/J.%20K.%20Rowling%20-%20Harry%20Potter%201%20-%20Sorcerer's%20Stone.txt")
+[<u style="font-weight: bold">해리포터와 마법사의 돌 원문 링크</u>](https://github.com/amephraim/nlp/blob/master/texts/J.%20K.%20Rowling%20-%20Harry%20Potter%201%20-%20Sorcerer's%20Stone.txt)
 
 ## 3. 이미지 파일 준비하기
 
