@@ -13,12 +13,12 @@
     {% include head.html %} {% include head/custom.html %}
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const sbar = document.querySelector(".sidebar__top");
+        const toTopBtn = document.querySelector(".sidebar__top");
         window.addEventListener("scroll", () => {
           if (window.scrollY > 100) {
-            sbar.style.right = "2em";
+            toTopBtn.style.right = "2em";
           } else {
-            sbar.style.right = "-2em";
+            toTopBtn.style.right = "-2em";
           }
         });
       });
