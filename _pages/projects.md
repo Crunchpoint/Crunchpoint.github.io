@@ -8,25 +8,20 @@ title: "Projects"
 
 ## Web Development Projects
 
-<!-- <ul class="link-grid">
-  {% for link in site.data.projects %}
-    <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
-  {% endfor %}
-</ul> -->
-
-<ul class="link-grid">
-  {% for link in site.data.projects %}
+<ul class="project-grid">
+  {% for project in site.data.projects %}
     <li>
-      <a href="{{ link.url }}" target="_blank">
-        <img src="{{ link.image }}" alt="{{ link.name }}">
-        <p>{{ link.name }}</p>
+      <a href="{{ project.url }}" target="_blank">
+        <img src="{{ project.image }}" alt="{{ project.name }}">
+        <p>{{ project.name }}</p>
+        <p><{{ project.stack }}></p>
       </a>
     </li>
   {% endfor %}
 </ul>
 
 <style>
-.link-grid {
+.project-grid {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -35,30 +30,37 @@ title: "Projects"
   grid-gap: 10px;
 }
 
-.link-grid li {
+.project-grid li {
   text-align: center;
 }
 
-.link-grid li a {
+.project-grid li a {
   display: block;
-  padding: 10px;
-  background-color: #f0f0f0;
+  padding: 5px;
+  background-color: #fafafa;
   text-decoration: none;
-  color: #333;
+  border: 1px solid #ddd;
+  /* color: #333; */
   border-radius: 5px;
 }
 
-.link-grid li a:hover {
+.project-grid li a:hover {
   background-color: #ccc;
 }
 
-.link-grid li a img {
+.project-grid li a img {
   border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
-.link-grid li a p {
-  font-size: 0.8125em;
+.project-grid li a p {
+  font-size: 0.85em;
+  font-weight: bold;
   margin: 5px 0 0 0;
 }
 
+.project-grid li a p:last-child {
+  font-weight: normal;
+  font-size: 0.6em;
+}
 </style>
