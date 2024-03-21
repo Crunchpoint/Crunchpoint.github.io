@@ -55,12 +55,13 @@ title: "Projects"
 
 .project-grid li a p {
   font-size: 0.85em;
-  font-weight: bold;
+  font-weight: 500;
   margin: 5px 0 0 0;
 }
 
 .project-grid li a p:last-child {
   font-weight: normal;
   font-size: 0.6em;
+  margin: 0;
 }
 </style>
