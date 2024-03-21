@@ -8,9 +8,20 @@ title: "Projects"
 
 ## Web Development Projects
 
-<ul class="link-grid">
+<!-- <ul class="link-grid">
   {% for link in site.data.projects %}
     <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
+  {% endfor %}
+</ul> -->
+
+<ul class="link-grid">
+  {% for link in site.data.projects %}
+    <li>
+      <a href="{{ link.url }}" target="_blank">
+        <img src="{{ link.image }}" alt="{{ link.name }}">
+        <p>{{ link.name }}</p>
+      </a>
+    </li>
   {% endfor %}
 </ul>
 
@@ -20,7 +31,7 @@ title: "Projects"
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 한 행에 3개의 아이템 */
   grid-gap: 10px;
 }
 
@@ -40,4 +51,14 @@ title: "Projects"
 .link-grid li a:hover {
   background-color: #ccc;
 }
+
+.link-grid li a img {
+  border-radius: 5px;
+}
+
+.link-grid li a p {
+  font-size: 0.8125em;
+  margin: 5px 0 0 0;
+}
+
 </style>
