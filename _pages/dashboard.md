@@ -7,7 +7,7 @@ title: "Dashboard"
 # Dashboard
 
 <!-- google -->
-<html>
+<!-- <html>
 
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -37,12 +37,12 @@ title: "Dashboard"
     </script>
 
   </head>
-  
+
   <body>
     <div id="curve_chart" style="width: 100%; height: 50vh"></div>
   </body>
 
-</html>
+</html> -->
 
 <!-- tab -->
 <!-- <html>
