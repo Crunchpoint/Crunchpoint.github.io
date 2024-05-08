@@ -25,6 +25,9 @@ categories:
       - title: "Python"
         url: /categories/python
         category: python
+      - title: "Java"
+        url: /categories/java
+        category: java
 
   - title: "OS"
     children:
